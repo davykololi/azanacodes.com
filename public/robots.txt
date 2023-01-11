@@ -1,0 +1,12 @@
+User-agent: *
+Sitemap:https://frencymedia.com/sitemap.xml
+Disallow: /admin/
+Disallow: /author/
+Disallow: /editor/
+Disallow: /auth/redirect/
+Disallow: /google/callback
+Disallow: /facebook/callback
+Disallow: /github/callback
+Disallow: /twitter/callback
+Disallow: /linkedin/callback
+Disallow: /bitbucket/callback

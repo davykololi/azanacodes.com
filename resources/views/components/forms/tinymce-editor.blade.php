@@ -1,0 +1,1 @@
+<textarea class="form-control" id="myeditorinstance" name="content" rows="5" cols="40">{!! $article->content !!}</textarea>
