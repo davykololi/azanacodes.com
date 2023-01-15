@@ -25,10 +25,10 @@ class HomeController extends Controller
             $websiteName = config('app.name');
             $title = 'Home';
             $desc = 'The platform for laravel, vue js, react js, tailwind css and bootstrap tutorials and other latest programming online tutorials';
-            $keywords = 'react js tutorials, vue js tutorials, laravel tutorials,tailwind css tutorials';
+            $keywords = 'react js tutorials, vue js tutorials, laravel tutorials,tailwind css tutorials, programming tutorials';
             $url = URL::current();
-            $tel = '+254 0724351952';
-            $logo = 'https://frencymedia.com/static/logo.jpg';
+            $tel = '+254724351952';
+            $logo = 'https://magnificcoding.com/static/logo.jpg';
 
             SEOMeta::setTitle($title);
             SEOMeta::setDescription($desc);
@@ -41,7 +41,7 @@ class HomeController extends Controller
             OpenGraph::addProperty('locale','en-US');
 
             Twitter::setTitle($title);
-            Twitter::setSite('@frencymedia');
+            Twitter::setSite('@magnificcoding');
             Twitter::setDescription($desc);
             Twitter::setUrl($url);
 
@@ -55,11 +55,11 @@ class HomeController extends Controller
                     ->headline($title)
                     ->description($desc)
                     ->keywords($keywords)
-                    ->email('frencydia@gmail.com')
+                    ->email('magnificcoding@.com')
                     ->url($url)
                     ->contactPoint(Schema::ContactPoint()->telephone($tel)->areaServed('Worldwide'))
                     ->address(Schema::PostalAddress()->addressCountry('Kenya')->postalCode('254')->streetAddress('688'))
-                    ->sameAS("http://www.frencymedia.com")
+                    ->sameAS("http://www.magnificcoding.com")
                     ->logo(Schema::ImageObject()->url($logo));
                 
             echo $webSite->toScript();

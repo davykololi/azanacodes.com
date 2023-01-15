@@ -31,8 +31,8 @@ class PagesController extends Controller
     {
         $this->url = URL::current();
         $this->appLogo = URL::secureAsset('/static/logo.png');
-        $this->appSubDomain = "http://www.azanacodes.com";
-        $this->appMail = 'azanacodes.com';
+        $this->appSubDomain = "http://www.magnificcoding.com";
+        $this->appMail = 'magnificcoding@gmail.com';
         $this->orgName = config('app.name');
     }
 
@@ -46,7 +46,7 @@ class PagesController extends Controller
         $tags = Tag::with('articles')->get();
 
         $title = 'Contact Us';
-        $desc = 'Azana Codes Contact Us Page';
+        $desc = 'Magnific Coding Contact Us Page';
         $url = URL::current();
 
         SEOMeta::setTitle($title);
@@ -60,7 +60,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','ContactPage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@azanacodes');
+        Twitter::setSite('@magnificcoding');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -72,11 +72,11 @@ class PagesController extends Controller
                 ->name($title)
                 ->description($desc)
                 ->url($url)
-                ->logo("https://azanacodes.com/static/logo.png")
-                ->sameAS("https://www.azanacodes.com")
+                ->logo("https://magnificcoding.com/static/logo.png")
+                ->sameAS("https://www.magnificcoding.com")
                 ->contactPoint([Schema::ContactPoint()
-                ->telephone('254 0724351952')
-                ->email('azanacodes@gmail.com')]);
+                ->telephone('+254724351952')
+                ->email('magnificcoding@gmail.com')]);
         echo $contact->toScript();
 
         $data = array(
@@ -110,7 +110,7 @@ class PagesController extends Controller
     public function portfolio()
     {
         $title = 'Portfolio';
-        $desc = 'Azana Codes Portfolio Page';
+        $desc = 'Magnific Coding Portfolio Page';
         $url = URL::current();
 
         SEOMeta::setTitle($title);
@@ -124,7 +124,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','PortfolioPage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@azanacodes');
+        Twitter::setSite('@magnificcoding');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -136,11 +136,11 @@ class PagesController extends Controller
                 ->name($title)
                 ->description($desc)
                 ->url($url)
-                ->logo("https://azanacodes.com/static/logo.png")
-                ->sameAS("https://www.azanacodes.com")
+                ->logo("https://magnificcoding.com/static/logo.png")
+                ->sameAS("https://www.magnificcoding.com")
                 ->contactPoint([Schema::ContactPoint()
-                ->telephone('254 0724351952')
-                ->email('azanacodes@gmail.com')]);
+                ->telephone('+254724351952')
+                ->email('magnificcoding@gmail.com')]);
         echo $portfolio->toScript();
 
         $data = array(
@@ -153,7 +153,7 @@ class PagesController extends Controller
     public function about()
     {
         $title = 'About Us';
-        $desc = 'Azana Codes About Us Page';
+        $desc = 'Magnific Coding About Us Page';
         $url = URL::current();
 
         SEOMeta::setTitle($title);
@@ -167,7 +167,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','AboutPage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@azanacodes');
+        Twitter::setSite('@magnificcoding');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -179,11 +179,11 @@ class PagesController extends Controller
                 ->name($title)
                 ->description($desc)
                 ->url($url)
-                ->logo("https://azanacodes.com/static/logo.png")
-                ->sameAS("https://www.azanacodes.com")
+                ->logo("https://magnificcoding.com/static/logo.png")
+                ->sameAS("https://www.magnificcoding.com")
                 ->contactPoint([Schema::ContactPoint()
-                ->telephone('254 0724351952')
-                ->email('azanacodes@gmail.com')]);
+                ->telephone('+254724351952')
+                ->email('magnificcoding@gmail.com')]);
         echo $about->toScript();
 
         $data = array(

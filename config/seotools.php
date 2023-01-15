@@ -9,7 +9,7 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "AzanaCodes", // set false to total remove
+            'title'        => "MagnificCoding", // set false to total remove
             'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
             'description'  => 'For those who helped create the Genki Dama', // set false to total remove
             'separator'    => ' - ',
@@ -36,11 +36,11 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => 'AzanaCodes', // set false to total remove
+            'title'       => 'MagnificCoding', // set false to total remove
             'description' => 'For those who helped create the Genki Dama', // set false to total remove
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => false,
-            'site_name'   => '@azanacodes',
+            'site_name'   => '@magnificcoding',
             'images'      => [],
         ],
     ],
@@ -50,8 +50,8 @@ return [
          */
         'defaults' => [
             'card'        => 'summary_large_image',
-            'site'        => '@azanacodes',
-            'creator' => '@azanacodes',
+            'site'        => '@magnificcoding',
+            'creator' => '@magnificcoding',
         ],
     ],
     'json-ld' => [
@@ -59,13 +59,13 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title'       => 'AzanaCodes', // set false to total remove
+            'title'       => 'MagnificCoding', // set false to total remove
             'description' => 'For those who helped create the Genki Dama', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => 'WebPage',
             'images'      => [],
-            'sameAs' => 'http://www.azanacodes.com',
-            'logo' => 'https://azanacodes.com/static/logo.png',
+            'sameAs' => 'http://www.magnificcoding.com',
+            'logo' => 'https://magnificcoding.com/static/logo.png',
         ],
     ],
 ];

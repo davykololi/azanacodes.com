@@ -30,8 +30,8 @@ class FrontEndArticleController extends Controller
     {
         $this->url = URL::current();
         $this->appLogo = URL::secureAsset('/static/logo.png');
-        $this->appSubDomain = "http://www.azanacodes.com";
-        $this->appMail = 'azanacodes.com';
+        $this->appSubDomain = "http://www.magnificcoding.com";
+        $this->appMail = 'magnificcoding@gmail.com';
         $this->orgName = config('app.name');
     }
 
@@ -78,7 +78,7 @@ class FrontEndArticleController extends Controller
             OpenGraph::addProperty('type','articles');
 
             Twitter::setTitle($title);
-            Twitter::setSite('@azanacodes');
+            Twitter::setSite('@magnificcoding');
             Twitter::setDescription($desc);
             Twitter::setUrl($this->url);
             Twitter::setType('summary_large_image');
@@ -88,12 +88,12 @@ class FrontEndArticleController extends Controller
             JsonLd::setType('articleSection');
         
             foreach($categoryArticles as $article){
-                OpenGraph::addImage('https://azanacodes.com/storage/storage/'.$article->image,
-                ['secure_url' => 'https://azanacodes.com/storage/storage/'.$article->image,
+                OpenGraph::addImage('https://magnificcoding.com/storage/storage/'.$article->image,
+                ['secure_url' => 'https://magnificcoding.com/storage/storage/'.$article->image,
                 'height'=>'628','width' =>'1200'
                 ]);
-                JsonLd::addImage('https://azanacodes.com/storage/storage/'.$article->image);
-                Twitter::setImage('https://azanacodes.com/storage/storage/'.$article->image);
+                JsonLd::addImage('https://magnificcoding.com/storage/storage/'.$article->image);
+                Twitter::setImage('https://magnificcoding.com/storage/storage/'.$article->image);
             }
 
             $newsArticles = Schema::Article()
@@ -136,7 +136,7 @@ class FrontEndArticleController extends Controller
             $allArticles = Article::search($request->search)->paginate(2);
         }else{
             Article::where('slug',$slug)->published()->firstOrFail()->increment('total_views');
-            $article = Article::where('slug',$slug)->published()->eagerLoaded()->with('comments','user')->firstOrFail();
+            $article = Article::where('slug',$slug)->published()->eagerLoaded()->firstOrFail();
             $all = Article::published()->latest('id')->eagerLoaded();
             $allArticles = $all->inRandomOrder()->limit(10)->get();
             $allArticlesAside = $all->inRandomOrder()->limit(10)->get();
@@ -161,11 +161,11 @@ class FrontEndArticleController extends Controller
             $publishedDate = $article->created_at;
             $modifiedDate = $article->updated_at;
             $author = $article->user->name;
-            $imageUrl = 'https://azanacodes.com/storage/storage/'.$article->image;
+            $imageUrl = 'https://magnificcoding.com/storage/storage/'.$article->image;
             if(!empty($article->user->profile->image)){
-                $authorUrl = 'https://azanacodes.com/storage/avatars/'.$article->user->profile->image;
+                $authorUrl = 'https://magnificcoding.com/storage/avatars/'.$article->user->profile->image;
             }else{
-                $authorUrl = 'https://azanacodes.com/static/avatar.png';
+                $authorUrl = 'https://magnificcoding.com/static/avatar.png';
             }
             
             $width = '1200';
@@ -183,22 +183,22 @@ class FrontEndArticleController extends Controller
             OpenGraph::setUrl($this->url);
             OpenGraph::addProperty('type','Article');
             OpenGraph::addProperty('locale','en-US');
-            OpenGraph::addImage('https://azanacodes.com/storage/storage/'.$article->image,
-                ['secure_url' => 'https://azanacodes.com/storage/storage/'.$article->image,
+            OpenGraph::addImage('https://magnificcoding.com/storage/storage/'.$article->image,
+                ['secure_url' => 'https://magnificcoding.com/storage/storage/'.$article->image,
                 'height'=>'628','width' =>'1200'
             ]);
 
             Twitter::setTitle($title);
-            Twitter::setSite('@azanacodes');
+            Twitter::setSite('@magnificcoding');
             Twitter::setDescription($desc);
             Twitter::setUrl($this->url);
-            Twitter::setImage('https://azanacodes.com/storage/storage/'.$article->image);
+            Twitter::setImage('https://magnificcoding.com/storage/storage/'.$article->image);
             Twitter::setType('summary_large_image');
 
             JsonLd::setTitle($title);
             JsonLd::setDescription($desc);
             JsonLd::setType('Article');
-            JsonLd::addImage('https://azanacodes.com/storage/storage/'.$article->image);
+            JsonLd::addImage('https://magnificcoding.com/storage/storage/'.$article->image);
 
             $newsArticles = Schema::Article()
                     ->headline($title)
@@ -288,7 +288,7 @@ class FrontEndArticleController extends Controller
             OpenGraph::addProperty('type','Place');
 
             Twitter::setTitle($title);
-            Twitter::setSite('@azanacodes');
+            Twitter::setSite('@magnificcoding');
             Twitter::setDescription($desc);
             Twitter::setUrl($this->url);
             Twitter::setType('summary_large_image');
@@ -298,12 +298,12 @@ class FrontEndArticleController extends Controller
             JsonLd::setType('Article');
 
             foreach($tagArticles as $article){
-                OpenGraph::addImage('https://azanacodes.com/storage/storage/'.$article->image,
-                ['secure_url' => 'https://azanacodes.com/storage/storage/'.$article->image,
+                OpenGraph::addImage('https://magnificcoding.com/storage/storage/'.$article->image,
+                ['secure_url' => 'https://magnificcoding.com/storage/storage/'.$article->image,
                 'height'=>'628','width' =>'1200'
                 ]);
-                JsonLd::addImage('https://azanacodes.com/storage/storage/'.$article->image);
-                Twitter::setImage('https://azanacodes.com/storage/storage/'.$article->image);
+                JsonLd::addImage('https://magnificcoding.com/storage/storage/'.$article->image);
+                Twitter::setImage('https://magnificcoding.com/storage/storage/'.$article->image);
             }
 
             $tagArts = Schema::Article()
@@ -369,7 +369,7 @@ class FrontEndArticleController extends Controller
             $name = $author->name;
             $title = 'Articles By'." ".$name;
             $email = $author->email;
-            $image = 'https://azanacodes.com/storage/storage/'.$author->image;
+            $image = 'https://magnificcoding.com/storage/storage/'.$author->image;
             $publishedDate = $author->created_at;
             $modifiedDate = $author->updated_at;
             $phone = $author->phone_no;
@@ -386,7 +386,7 @@ class FrontEndArticleController extends Controller
             OpenGraph::addProperty('type','Person');
 
             Twitter::setTitle($name);
-            Twitter::setSite('@azanacodes');
+            Twitter::setSite('@magnificcoding');
             Twitter::setDescription($title);
             Twitter::setUrl($this->url);
             Twitter::setType('summary_large_image');
@@ -396,9 +396,9 @@ class FrontEndArticleController extends Controller
             JsonLd::setType('Person');
 
             foreach($authorArticles as $article){
-                OpenGraph::addImage('https://azanacodes.com/storage/storage/'.$article->image,['height'=>'628','width' =>'1200']);
-                JsonLd::addImage('https://azanacodes.com/storage/storage/'.$article->image);
-                Twitter::setImage('https://azanacodes.com/storage/storage/'.$article->image);
+                OpenGraph::addImage('https://magnificcoding.com/storage/storage/'.$article->image,['height'=>'628','width' =>'1200']);
+                JsonLd::addImage('https://magnificcoding.com/storage/storage/'.$article->image);
+                Twitter::setImage('https://magnificcoding.com/storage/storage/'.$article->image);
             }
 
             $userArticles = Schema::Person()

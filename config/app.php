@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'FrencyMedia'),
+    'name' => env('APP_NAME', 'MagnificCoding'),
 
     /*
     |--------------------------------------------------------------------------

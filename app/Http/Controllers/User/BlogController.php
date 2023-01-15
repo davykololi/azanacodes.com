@@ -49,11 +49,11 @@ class BlogController extends Controller
 
             $websiteName = config('app.name');
             $title = 'Blog';
-            $desc = 'The Azana Codes Programming Articles';
-            $keywords = 'azanacodes programming articles';
+            $desc = 'The Magnific Coding Articles';
+            $keywords = 'magnific coding blog articles';
             $url = URL::current();
-            $tel = '+254 0724351952';
-            $logo = 'https://frencymedia.com/static/logo.jpg';
+            $tel = '+254724351952';
+            $logo = 'https://magnificcoding.com/static/logo.jpg';
 
             SEOMeta::setTitle($title);
             SEOMeta::setDescription($desc);
@@ -66,7 +66,7 @@ class BlogController extends Controller
             OpenGraph::addProperty('locale','en-US');
 
             Twitter::setTitle($title);
-            Twitter::setSite('@frencymedia');
+            Twitter::setSite('@magnificcoding');
             Twitter::setDescription($desc);
             Twitter::setUrl($url);
 
@@ -80,11 +80,11 @@ class BlogController extends Controller
                     ->headline($title)
                     ->description($desc)
                     ->keywords($keywords)
-                    ->email('frencydia@gmail.com')
+                    ->email('magnificcoding@gmail.com')
                     ->url($url)
                     ->contactPoint(Schema::ContactPoint()->telephone($tel)->areaServed('Worldwide'))
                     ->address(Schema::PostalAddress()->addressCountry('Kenya')->postalCode('254')->streetAddress('688'))
-                    ->sameAS("http://www.frencymedia.com")
+                    ->sameAS("http://www.magnificcoding.com")
                     ->logo(Schema::ImageObject()->url($logo));
                 
             echo $webSite->toScript();
