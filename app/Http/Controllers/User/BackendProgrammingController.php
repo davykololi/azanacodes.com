@@ -6,6 +6,7 @@ use SEOMeta;
 use OpenGraph;
 use Twitter;
 use JsonLd;
+use Spatie\SchemaOrg\Schema;
 use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

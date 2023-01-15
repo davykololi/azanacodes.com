@@ -42,6 +42,10 @@ use App\Http\Controllers\TinymceImageUploadController;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //BlogController Route
 Route::get('/blog',BlogController::class)->name('blog');
+//SEODetails Route
+Route::get('services/seo',SEODetailsController::class)->name('services.seo');
+//Backend Programming Route
+Route::get('services/backend',BackendProgrammingController::class)->name('services.backend');
 //Comments Route
 Route::post('comments/store', [CommentController::class, 'store'])->name('store.comment');
 Route::controller(FrontEndArticleController::class)->group(function(){
@@ -59,10 +63,6 @@ Route::controller(PagesController::class)->group(function(){
 	Route::get('/about', 'about')->name('about');
 	Route::get('/policy', 'policy')->name('policy');
 });
-//SEODetails Route
-Route::get('seo',SEODetailsController::class)->name('seo');
-//Backend Programming Route
-Route::get('backend-programming',BackendProgrammingController::class)->name('backend-programming');
 
 //Newsletter Route
 Route::post('newsletter', [NewsLetterController::class, 'store'])->name('newsletter');

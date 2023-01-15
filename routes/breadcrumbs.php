@@ -59,15 +59,15 @@ Breadcrumbs::for('policy', function (BreadcrumbTrail $trail): void{
 });
 
 // Home > SEO Route
-Breadcrumbs::for('seo', function (BreadcrumbTrail $trail): void{
+Breadcrumbs::for('services.seo', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Search Engine Optimization', route('seo'));
+    $trail->push('Search Engine Optimization', route('services.seo'));
 });
 
 // Home > Backend Programming Route
-Breadcrumbs::for('backend-programming', function (BreadcrumbTrail $trail): void{
+Breadcrumbs::for('services.backend', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Backend Programming', route('backend-programming'));
+    $trail->push('Backend Programming', route('services.backend'));
 });
 
 // Home > Login

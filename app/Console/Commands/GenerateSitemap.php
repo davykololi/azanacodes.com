@@ -45,12 +45,13 @@ class GenerateSitemap extends Command
     {
         $sitemap = Sitemap::create()
             ->add(Url::create('/'))
+            ->add(Url::create('/blog'))
             ->add(Url::create('/newsletter'))
             ->add(Url::create('/contact'))
             ->add(Url::create('/about'))
             ->add(Url::create('/portfolio'))
-            ->add(Url::create('/seo'))
-            ->add(Url::create('/backend-programming'));
+            ->add(Url::create('/services/seo'))
+            ->add(Url::create('/services/backend'));
 
         $categories = Category::all();
         foreach($categories as $category){

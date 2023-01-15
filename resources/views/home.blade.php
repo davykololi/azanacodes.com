@@ -348,7 +348,7 @@
               <i class="ri-discuss-line icon"></i>
               <h3>Search Engine Optimization</h3>
               <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
-              <a href="{{ route('seo') }}" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{{ route('services.seo') }}" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -357,7 +357,7 @@
               <i class="ri-discuss-line icon"></i>
               <h3>Backend Programming</h3>
               <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-              <a href="{{ route('backend-programming') }}" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="{{ route('services.backend') }}" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
