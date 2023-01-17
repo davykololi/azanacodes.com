@@ -27,7 +27,7 @@ class Article extends Model implements Feedable
 {
     use HasFactory, Sluggable, Searchable;
     protected $table = 'articles';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id'; 
     protected $appends = ['published','reading_time'];
     protected $fillable = ['title','image','caption','content','description','keywords','total_views','is_published','published_at','user_id','category_id','slug','published_by'];
     const EXCERPT_LENGTH = 150;
