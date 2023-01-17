@@ -21,7 +21,7 @@
     <!-- rss feed -->
     @include('feed::links')
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <!-- Styles -->
