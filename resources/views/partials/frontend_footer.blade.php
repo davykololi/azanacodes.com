@@ -49,7 +49,7 @@
               Moi Avenue Street <br>
               Bungoma, 688-50200<br>
               Kenya <br><br>
-              <strong>Phone:</strong> {{ Config::get('constants.mobile') }}<br>
+              <strong>Phone:</strong>+254 {{ Config::get('constants.mobile') }}<br>
               <strong>Email:</strong>  <a href="mailto:azanacodes@gmail.com">{{ Config::get('constants.email') }}</a><br>
             </p>
           </div>
