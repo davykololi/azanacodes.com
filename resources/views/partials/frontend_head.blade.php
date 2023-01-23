@@ -15,7 +15,7 @@
     <meta name="googlebot" content="index,follow">
     <meta property="og:site_name" content="{{config('app.name')}}">
     <!--Google Verification Code -->
-    <meta name="google-site-verification" content="13HG_secYVa11ApnA92dYyzzv-9kw8zqg3_Bln_V0Hc" />
+    <meta name="google-site-verification" content="NvWTQHvlzHG8sT_chvNNX27aSHOdaA5jp77_ig_EIBQ" />
     <!-- Meta Tags -->
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
