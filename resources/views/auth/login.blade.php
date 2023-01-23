@@ -16,9 +16,11 @@
     <section class="inner-page">
       <div class="container">
         <div class="row">
-        <div class="col-lg-12 entries">
+        <div class="col-lg-8 entries">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header ctr bg-color">
+                    <h1 class="white"><img src="{{ asset('static/login.png') }}" alt="login"></h1>
+                </div>
 
                 <div class="card-body">
                     @if(session('message'))
@@ -29,10 +31,8 @@
                         @csrf 
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Enter Email Address" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -43,10 +43,8 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Enter Password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -57,9 +55,9 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-6">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" value="{{ old('remember') ? 'checked' : '' }}">
 
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
@@ -69,7 +67,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                            <div class="col-md-8">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
@@ -81,11 +79,11 @@
                                 @endif
                             </div>
                         </div>
-
+                        <br/>
                         <div class="form-group row mb-0 mt-3">
-                            <label for="login with" class="col-md-4 col-form-label text-md-right">{{ __('Login With:') }}</label>
+                            <label for="login with" class="col-md-4"><b class="blue">{{ __('Login With:') }}</b></label>
                             <br/>
-                            <div class="col-md-8 offset-md-4" id="social-links">
+                            <div class="col-md-8" id="social-links">
                                 <ul>
                                     <li><a href="{{ url('/login/twitter') }}"><i class="fab fa-twitter"></i></a></li>
                                     <li><a href="{{ url('/login/facebook') }}"><i class="fab fa-facebook"></i></a></li>

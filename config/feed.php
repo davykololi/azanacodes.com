@@ -18,8 +18,8 @@ return [
              */
             'url' => '/feed',
 
-            'title' => 'Azana Codes Programming Articles',
-            'description' => 'Get the latest articles about programming and software technologies.',
+            'title' => 'Magnific Coding Programming Articles',
+            'description' => 'Get the latest articles about programming using the latest technologies.',
             'language' => 'en-US',
 
             /*

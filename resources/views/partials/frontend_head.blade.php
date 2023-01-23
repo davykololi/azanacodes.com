@@ -14,6 +14,8 @@
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta property="og:site_name" content="{{config('app.name')}}">
+    <!--Google Verification Code -->
+    <meta name="google-site-verification" content="13HG_secYVa11ApnA92dYyzzv-9kw8zqg3_Bln_V0Hc" />
     <!-- Meta Tags -->
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
@@ -52,5 +54,10 @@
                 display: inline-block !important;
                 min-width: 100%;
             }
+        .ctr{text-align: center;}
+        .white{color: white;font: 20px}
+        .blue{color: blue;font: 16px}
+        .bg-color{background-color: blue}
+        .width{width: 200px}
     </style>
 </head>

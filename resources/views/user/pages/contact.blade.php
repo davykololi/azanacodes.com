@@ -28,21 +28,21 @@
                 <div class="info-box">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
-                  <p>A108 Adam Street,<br>New York, NY 535022</p>
+                  <p>Moi Avenue Street,<br>Bungoma County, Kenya</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-telephone"></i>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                  <p>+254 724351952<br>+254 759116765</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@example.com<br>contact@example.com</p>
+                  <p>info@magnificcoding.com<br>contact@magnificcoding.com</p>
                 </div>
               </div>
               <div class="col-md-6">

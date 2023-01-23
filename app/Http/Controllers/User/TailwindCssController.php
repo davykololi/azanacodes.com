@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class BackendProgrammingController extends Controller
+class TailwindCssController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -23,11 +23,11 @@ class BackendProgrammingController extends Controller
     {
         //
         $websiteName = config('app.name');
-        $title = 'Backend Programming Services Offered At Magnific Coding Kenya Limited';
-        $desc = 'Backend Programming services offered at Magnific Coding Kenya Limited';
-        $keywords = 'offerd backend programming services,offered backend programming services';
+        $title = 'Tailwind Css Design Services';
+        $desc = 'We design website using tailwind css at Magnific Coding Kenya';
+        $keywords = 'Designing websites with Tailwind Css';
         $url = URL::current();
-        $tel = '+254724351952';
+        $tel = '+254 724351952';
         $logo = 'https://magnificcoding.com/static/logo.jpg';
 
         SEOMeta::setTitle($title);
@@ -64,6 +64,6 @@ class BackendProgrammingController extends Controller
                 
         echo $back->toScript();
 
-        return view('user.backend_programming');
+        return view('user.services.tailwindcss');
     }
 }

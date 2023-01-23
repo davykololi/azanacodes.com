@@ -27,7 +27,7 @@ class SEODetailsController extends Controller
         $desc = 'Search engine optimization services offered at Magnific Coding Kenya Limited';
         $keywords = 'offered seo services,offered search engine optimization services';
         $url = URL::current();
-        $tel = '+254724351952';
+        $tel = '+254 724351952';
         $logo = 'https://magnificcoding.com/static/logo.jpg';
 
         SEOMeta::setTitle($title);
@@ -64,6 +64,6 @@ class SEODetailsController extends Controller
                 
         echo $seo->toScript();
         
-        return view('user.seo_details');
+        return view('user.services.seo_details');
     }
 }

@@ -8,7 +8,7 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="/" class="logo d-flex align-items-center">
-              <img src="{{ asset('static/logo.png') }}" alt="{{ Config::get('app.name') }} logo">
+              <img src="{{ asset('static/logo.jpg') }}" alt="{{ Config::get('app.name') }} logo">
               <span>{{ Config::get('app.name') }}</span>
             </a>
             <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
@@ -25,10 +25,11 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bi bi-chevron-right"></i> <a href="/">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="{{ route('about') }}">About Us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="{{ route('contact') }}">Contact Us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{{ route('blog') }}">Blog</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{{ route('about') }}">About</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{{ route('contact') }}">Contact</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="{{ route('portfolio') }}">Portfolio</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{{ route('service') }}">Terms of service</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="{{ route('policy') }}">Privacy policy</a></li>
             </ul>
           </div>

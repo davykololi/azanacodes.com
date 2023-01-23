@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center">
           <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap</h2>
+          <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented developers and designers making websites using the latest programming techlologies sush as Laravel, React Js, Vue Js, HTML, Javascript, Bootstrap and Tailwind Css</h2>
           <div data-aos="fade-up" data-aos-delay="600">
             <div class="text-center text-lg-start">
               <a href="{{ route('about') }}" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
@@ -338,7 +338,7 @@
 
         <header class="section-header">
           <h2>Services</h2>
-          <p>Veritatis et dolores facere numquam et praesentium</p>
+          <p>We provide the following services at Magnific Coding Kenya</p>
         </header>
 
         <div class="row gy-4">
@@ -347,7 +347,7 @@
             <div class="service-box blue">
               <i class="ri-discuss-line icon"></i>
               <h3>Search Engine Optimization</h3>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+              <p>We have extensive knowledge in Search Engine Optimization and therefore .....</p>
               <a href="{{ route('services.seo') }}" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -355,9 +355,9 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-box orange">
               <i class="ri-discuss-line icon"></i>
-              <h3>Backend Programming</h3>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-              <a href="{{ route('services.backend') }}" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              <h3>Tailwind Css</h3>
+              <p>We design beautiful websites using Tailwind Css and also assist those clients ...</p>
+              <a href="{{ route('services.tailwindcss') }}" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -503,12 +503,12 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                    Non consectetur a erat nam at lectus urna duis?
+                    Does a website have any value to my business?
                   </button>
                 </h2>
                 <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                   <div class="accordion-body">
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                    A website is very essential marketing tool for any business in the current world we are living in. For example this website is our marketing tool. As a web designers and developers, we depend on this website to reach to our clients around the globe. Just to mention, social media apps such as facebook and twitter are websites and nearly everybody uses them nowadays to market thier products or to reach to their potential clients. A website can be monetized as well and can be a good source of income. Therefore a website has the greatest value to your business.
                   </div>
                 </div>
               </div>
@@ -516,12 +516,12 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                    Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                    How can I create or own a website yet I'm not a developer?
                   </button>
                 </h2>
                 <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                   <div class="accordion-body">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    Creating and owning a website is not difficulty nowadays due to availability of several website builders that requires only drug and drop. This is only simple to those who require simple static websites. But it becomes difficulty when certain websites become complicated and require very specific customization based on the user needs. This requires developers coding skills and thst's why we are here to teach you how to code. For those that require our services, don't hestate to reach to us using the above stated contacts. We create customized websites as per your needs.
                   </div>
                 </div>
               </div>
@@ -529,12 +529,12 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                    How can I attract trafic to my website?
                   </button>
                 </h2>
                 <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                   <div class="accordion-body">
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                    A website without traffic is like a well with no water. Without water it's useless and nobody visits it to quence their thirst. Same applies to a website. If your website has no traffic, it means it's not providing valuable content to the end user. Content is King. Write what people want and not what you want. Organize your codes well, given that poor coding affects the performance of your website. Is your website well optimized for Search Engines? What about image optimization? Not well optimized images hamper the performance of your website. Keyword research is key. Attracting traffic to a website entails a lot and I have provided the detailed information about attracting traffic to a website through the link below. Ensure you equip yourself with this useful tutorial to gain more traffic to your website by 300%.
                   </div>
                 </div>
               </div>
@@ -550,12 +550,12 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
-                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                    Does having programming skills important to me?
                   </button>
                 </h2>
                 <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                   <div class="accordion-body">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    Not everyone requires having programming skills .
                   </div>
                 </div>
               </div>
@@ -563,7 +563,7 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
-                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                    Where do I get content for my website?
                   </button>
                 </h2>
                 <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
@@ -576,7 +576,7 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-3">
-                    Varius vel pharetra vel turpis nunc eget lorem dolor?
+                    How can I make money through blogging?
                   </button>
                 </h2>
                 <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">

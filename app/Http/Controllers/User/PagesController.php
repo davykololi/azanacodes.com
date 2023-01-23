@@ -75,7 +75,7 @@ class PagesController extends Controller
                 ->logo("https://magnificcoding.com/static/logo.png")
                 ->sameAS("https://www.magnificcoding.com")
                 ->contactPoint([Schema::ContactPoint()
-                ->telephone('+254724351952')
+                ->telephone('+254 724351952')
                 ->email('magnificcoding@gmail.com')]);
         echo $contact->toScript();
 
@@ -87,7 +87,7 @@ class PagesController extends Controller
             'tags' => $tags,
         );
     	
-    	return view('user.contact',$data);
+    	return view('user.pages.contact',$data);
     }
 
     public function store(ContactFormRequest $request)
@@ -139,7 +139,7 @@ class PagesController extends Controller
                 ->logo("https://magnificcoding.com/static/logo.png")
                 ->sameAS("https://www.magnificcoding.com")
                 ->contactPoint([Schema::ContactPoint()
-                ->telephone('+254724351952')
+                ->telephone('+254 724351952')
                 ->email('magnificcoding@gmail.com')]);
         echo $portfolio->toScript();
 
@@ -147,7 +147,7 @@ class PagesController extends Controller
             'title' => $title,
         );
 
-        return view('user.portfolio',$data);
+        return view('user.pages.portfolio',$data);
     }
 
     public function about()
@@ -182,7 +182,7 @@ class PagesController extends Controller
                 ->logo("https://magnificcoding.com/static/logo.png")
                 ->sameAS("https://www.magnificcoding.com")
                 ->contactPoint([Schema::ContactPoint()
-                ->telephone('+254724351952')
+                ->telephone('+254 724351952')
                 ->email('magnificcoding@gmail.com')]);
         echo $about->toScript();
 
@@ -190,11 +190,92 @@ class PagesController extends Controller
             'title' => $title,
         );
 
-        return view('user.about',$data);
+        return view('user.pages.about',$data);
     }
 
     public function policy()
     {
-        return view('user.policy');
+        $title = 'Private Policy';
+        $desc = 'Magnific Coding Private Policy Page';
+        $url = URL::current();
+
+        SEOMeta::setTitle($title);
+        SEOMeta::setDescription($desc);
+        SEOMeta::setKeywords('private policy');
+        SEOMeta::setCanonical($url);
+
+        OpenGraph::setTitle($title);
+        OpenGraph::setDescription($desc);
+        OpenGraph::setUrl($url);
+        OpenGraph::addProperty('type','PrivatePolicyPage');
+
+        Twitter::setTitle($title);
+        Twitter::setSite('@magnificcoding');
+        Twitter::setDescription($desc);
+        Twitter::setUrl($url);
+
+        JsonLd::setTitle($title);
+        JsonLd::setDescription($desc);
+        JsonLd::setType('PrivatePolicyPage');
+
+        $about = Schema::Organization()
+                ->name($title)
+                ->description($desc)
+                ->url($url)
+                ->logo("https://magnificcoding.com/static/logo.png")
+                ->sameAS("https://www.magnificcoding.com")
+                ->contactPoint([Schema::ContactPoint()
+                ->telephone('+254 724351952')
+                ->email('magnificcoding@gmail.com')]);
+        echo $about->toScript();
+
+        $data = array(
+            'title' => $title,
+        );
+
+        return view('user.pages.policy');
+    }
+
+    public function service()
+    {
+        $title = 'Terms Of Service';
+        $desc = 'Magnific Coding Terms Of Service Page';
+        $url = URL::current();
+
+        SEOMeta::setTitle($title);
+        SEOMeta::setDescription($desc);
+        SEOMeta::setKeywords('terms of service, terms, service');
+        SEOMeta::setCanonical($url);
+
+        OpenGraph::setTitle($title);
+        OpenGraph::setDescription($desc);
+        OpenGraph::setUrl($url);
+        OpenGraph::addProperty('type','TermsOfServicePage');
+
+        Twitter::setTitle($title);
+        Twitter::setSite('@magnificcoding');
+        Twitter::setDescription($desc);
+        Twitter::setUrl($url);
+
+        JsonLd::setTitle($title);
+        JsonLd::setDescription($desc);
+        JsonLd::setType('TermsOfServicePage');
+
+        $about = Schema::Organization()
+                ->name($title)
+                ->description($desc)
+                ->url($url)
+                ->logo("https://magnificcoding.com/static/logo.png")
+                ->sameAS("https://www.magnificcoding.com")
+                ->contactPoint([Schema::ContactPoint()
+                ->telephone('+254 724351952')
+                ->email('magnificcoding@gmail.com')]);
+        echo $about->toScript();
+
+        $data = array(
+            'title' => $title,
+        );
+
+        return view('user.pages.terms_of_service');
     }
 }

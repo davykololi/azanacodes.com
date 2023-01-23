@@ -58,6 +58,12 @@ Breadcrumbs::for('policy', function (BreadcrumbTrail $trail): void{
     $trail->push('Private Policy', route('policy'));
 });
 
+// Home > Terms Of Service
+Breadcrumbs::for('service', function (BreadcrumbTrail $trail): void{
+    $trail->parent('home');
+    $trail->push('Terms Of Service', route('service'));
+});
+
 // Home > SEO Route
 Breadcrumbs::for('services.seo', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');

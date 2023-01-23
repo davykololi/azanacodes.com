@@ -20,7 +20,7 @@ use App\Http\Controllers\Editor\EditorProfileController;
 use App\Http\Controllers\User\NewsLetterController;
 use App\Http\Controllers\Admin\FrontEndUsersController;
 use App\Http\Controllers\User\SEODetailsController;
-use App\Http\Controllers\User\BackendProgrammingController;
+use App\Http\Controllers\User\TailwindCssController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\User\UserChangePasswordController;
 use App\Http\Controllers\Admin\UserBanController;
@@ -45,7 +45,7 @@ Route::get('/blog',BlogController::class)->name('blog');
 //SEODetails Route
 Route::get('services/seo',SEODetailsController::class)->name('services.seo');
 //Backend Programming Route
-Route::get('services/backend',BackendProgrammingController::class)->name('services.backend');
+Route::get('services/taiwindcss',TailwindCssController::class)->name('services.tailwindcss');
 //Comments Route
 Route::post('comments/store', [CommentController::class, 'store'])->name('store.comment');
 Route::controller(FrontEndArticleController::class)->group(function(){
@@ -62,6 +62,7 @@ Route::controller(PagesController::class)->group(function(){
 	Route::get('/portfolio', 'portfolio')->name('portfolio');
 	Route::get('/about', 'about')->name('about');
 	Route::get('/policy', 'policy')->name('policy');
+	Route::get('/service', 'service')->name('service');
 });
 
 //Newsletter Route
