@@ -3,7 +3,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="/" class="logo d-flex align-items-center">
-        <img src="{{ asset('static/logo.jpg') }}" alt="{{ Config::get('app.name') }} logo">
+        <img src="{{ asset('static/logo.png') }}" alt="{{ Config::get('app.name') }} logo">
         <span>{{ Config::get('app.name') }}</span>
       </a>
 
