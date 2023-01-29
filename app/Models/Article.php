@@ -47,21 +47,6 @@ class Article extends Model implements Feedable
         ];
     }
 
-    /**
-     * Get the indexable data array for the model.
-     *
-     * @return array
-     */
-    public function toSearchableArray() : array
-    {
-        $searchable = [];
-        $searchable['title'] = $this->title;
-        $searchable['caption'] = $this->caption;
-        $searchable['description'] = $this->description;
-
-        return $searchable;
-    }
-
     public function toFeedItem(): FeedItem
     {
         return FeedItem::create()
