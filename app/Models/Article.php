@@ -19,6 +19,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -44,6 +45,21 @@ class Article extends Model implements Feedable
                 'source' => 'title'
             ]
         ];
+    }
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
+    public function toSearchableArray() : array
+    {
+        $searchable = [];
+        $searchable['title'] = $this->title;
+        $searchable['caption'] = $this->caption;
+        $searchable['description'] = $this->description;
+
+        return $searchable;
     }
 
     public function toFeedItem(): FeedItem
