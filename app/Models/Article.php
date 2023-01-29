@@ -25,7 +25,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model implements Feedable
 {
-    use HasFactory, Sluggable, Searchable;
+    use HasFactory, Sluggable;
     protected $table = 'articles';
     protected $primaryKey = 'id'; 
     protected $appends = ['published','reading_time'];
@@ -43,24 +43,6 @@ class Article extends Model implements Feedable
         return [
             'slug' => [
                 'source' => 'title'
-            ]
-        ];
-    }
-
-    /**
-     * Get the indexable data array for the model.
-     *
-     * @return array
-     */
-        public function toSearchableArray(): array
-    {
-        return [
-            'title' => $this->title,
-            'slug' => $this->slug,
-            'content' => $this->content,
-            'category' => [
-                'name' => $this->category->name,
-                'slug' => $this->category->slug,
             ]
         ];
     }

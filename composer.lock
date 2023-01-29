@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63688294d3924dc6c4b4dba13c632ce1",
+    "content-hash": "6063408d90632d659186884c37a32d65",
     "packages": [
         {
             "name": "alaouy/youtube",
