@@ -47,6 +47,24 @@ class Article extends Model implements Feedable
         ];
     }
 
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
+        public function toSearchableArray(): array
+    {
+        return [
+            'title' => $this->title,
+            'slug' => $this->slug,
+            'content' => $this->content,
+            'category' => [
+                'name' => $this->category->name,
+                'slug' => $this->category->slug,
+            ]
+        ];
+    }
+
     public function toFeedItem(): FeedItem
     {
         return FeedItem::create()
@@ -106,7 +124,7 @@ class Article extends Model implements Feedable
 
     public function scopeEagerLoaded($query)
     {
-        return $query->with('user.comments','user.profile','category','tags','comments')->withCount('comments');
+        return $query->with('user','category','tags','comments')->withCount('comments');
     }
 
     public function path()
