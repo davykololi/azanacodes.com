@@ -79,8 +79,9 @@ class ArticleController extends Controller
             DB::commit();
             $tags = $request->tags;
             $article->tags()->sync($tags);
+            toastr()->success(ucwords($article->title." ".'Article created successfully'));
 
-            return redirect()->route('author.articles.index')->withSuccss(ucwords($article->title." ".'Article created successfully'));
+            return redirect()->route('author.articles.index');
         } catch(\Throwable $th){
             DB::rollBack();
             throw $th;
