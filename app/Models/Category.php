@@ -48,19 +48,11 @@ class Category extends Model
     }
 
     /**
-     * Get the name of index associated with the model.
-     *
-     * @return string
-     */
-    public function toSearchableArray()
+     * Get the index name for the model.
+    */
+    public function searchableAs()
     {
-        $category = $this->only(['id','name'])
-                    ->with('articles')
-                    ->where('id','=',$this->id)
-                    ->first()
-                    ->toArray();
-                    
-        return $category;
+        return 'categories_index';
     }
 
 	public function articles(): HasMany

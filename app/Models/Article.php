@@ -48,21 +48,11 @@ class Article extends Model implements Feedable
     }
 
     /**
-     * Get the indexable data array for the model.
-     *
-     * @return array
-     */
-    public function toSearchableArray(): array
+     * Get the index name for the model.
+    */
+    public function searchableAs()
     {
-        return [
-            'title' => $this->title,
-            'slug' => $this->slug,
-            'content' => $this->content,
-            'category' => [
-                'name' => $this->category->name,
-                'slug' => $this->category->slug,
-            ]
-        ];
+        return 'articles_index';
     }
 
     public function toFeedItem(): FeedItem

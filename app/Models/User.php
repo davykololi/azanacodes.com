@@ -14,7 +14,6 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Traits\HasGravatar;
 use App\Casts\TimestampsCast;
-use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -27,7 +26,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable implements BannableContract
 {
-    use HasApiTokens, HasFactory, Notifiable, CanResetPassword, Bannable, Sluggable, Impersonate, Searchable, HasGravatar;
+    use HasApiTokens, HasFactory, Notifiable, CanResetPassword, Bannable, Sluggable, Impersonate, HasGravatar;
 
     /**
      * The attributes that are mass assignable.
@@ -70,22 +69,6 @@ class User extends Authenticatable implements BannableContract
                 'source' => 'name'
             ]
         ];
-    }
-
-    /**
-     * Get the name of index associated with the model.
-     *
-     * @return string
-     */
-    public function toSearchableArray()
-    {
-        $user = $this->only(['id','name'])
-                    ->with('articles')
-                    ->where('id','=',$this->id)
-                    ->first()
-                    ->toArray();
-                    
-        return $user;
     }
 
     public function isAdmin()

@@ -175,6 +175,8 @@ return [
         Yoeunes\Toastr\ToastrServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class,
+        
         /*
          * Application Service Providers...
          */

@@ -38,19 +38,11 @@ class Tag extends Model
     }
 
     /**
-     * Get the name of index associated with the model.
-     *
-     * @return string
-     */
-    public function toSearchableArray()
+     * Get the index name for the model.
+    */
+    public function searchableAs()
     {
-        $tag = $this->only(['id','name'])
-                    ->with('articles')
-                    ->where('id','=',$this->id)
-                    ->first()
-                    ->toArray();
-                    
-        return $tag;
+        return 'tags_index';
     }
 
     public function articles(): BelongsToMany
