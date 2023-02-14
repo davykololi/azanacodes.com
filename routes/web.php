@@ -62,7 +62,7 @@ Route::controller(PagesController::class)->group(function(){
 	Route::get('/portfolio', 'portfolio')->name('portfolio');
 	Route::get('/about', 'about')->name('about');
 	Route::get('/policy', 'policy')->name('policy');
-	Route::get('/terms-of-service', 'termsOfService')->name('terms.of.servive');
+	Route::get('/terms-of-service', 'termsOfService')->name('terms.of.service');
 });
 
 //Newsletter Route

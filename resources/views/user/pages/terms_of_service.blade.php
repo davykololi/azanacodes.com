@@ -7,7 +7,7 @@
     <section class="breadcrumbs">
       <div class="container">
         <ol>
-          <li><a href="{{ URL::to('/terms.of.service') }}">{{ Breadcrumbs::render('tems.of.service') }}</a></li>
+          <li><a href="{{ URL::to('/terms.of.service') }}">{{ Breadcrumbs::render('terms.of.service') }}</a></li>
         </ol>
       </div>
     </section><!-- End Breadcrumbs -->
