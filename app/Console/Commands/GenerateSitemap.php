@@ -50,6 +50,7 @@ class GenerateSitemap extends Command
             ->add(Url::create('/contact'))
             ->add(Url::create('/about'))
             ->add(Url::create('/portfolio'))
+            ->add(Url::create('/terms-of-service'))
             ->add(Url::create('/services/seo'))
             ->add(Url::create('/services/backend'));
 
