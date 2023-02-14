@@ -73,7 +73,7 @@ class PagesController extends Controller
                 ->description($desc)
                 ->url($url)
                 ->logo("https://magnificcoding.com/static/logo.png")
-                ->sameAS("https://www.magnificcoding.com")
+                ->sameAS("https://www.magnificcoding.com/contact")
                 ->contactPoint([Schema::ContactPoint()
                 ->telephone('+254 724351952')
                 ->email('magnificcoding@gmail.com')]);
@@ -137,7 +137,7 @@ class PagesController extends Controller
                 ->description($desc)
                 ->url($url)
                 ->logo("https://magnificcoding.com/static/logo.png")
-                ->sameAS("https://www.magnificcoding.com")
+                ->sameAS("https://www.magnificcoding.com/portfolio")
                 ->contactPoint([Schema::ContactPoint()
                 ->telephone('+254 724351952')
                 ->email('magnificcoding@gmail.com')]);
@@ -180,7 +180,7 @@ class PagesController extends Controller
                 ->description($desc)
                 ->url($url)
                 ->logo("https://magnificcoding.com/static/logo.png")
-                ->sameAS("https://www.magnificcoding.com")
+                ->sameAS("https://www.magnificcoding.com/about")
                 ->contactPoint([Schema::ContactPoint()
                 ->telephone('+254 724351952')
                 ->email('magnificcoding@gmail.com')]);
@@ -223,7 +223,7 @@ class PagesController extends Controller
                 ->description($desc)
                 ->url($url)
                 ->logo("https://magnificcoding.com/static/logo.png")
-                ->sameAS("https://www.magnificcoding.com")
+                ->sameAS("https://www.magnificcoding.com/policy")
                 ->contactPoint([Schema::ContactPoint()
                 ->telephone('+254 724351952')
                 ->email('magnificcoding@gmail.com')]);
@@ -236,7 +236,7 @@ class PagesController extends Controller
         return view('user.pages.policy');
     }
 
-    public function service()
+    public function termsOfService()
     {
         $title = 'Terms Of Service';
         $desc = 'Magnific Coding Terms Of Service Page';
@@ -244,7 +244,7 @@ class PagesController extends Controller
 
         SEOMeta::setTitle($title);
         SEOMeta::setDescription($desc);
-        SEOMeta::setKeywords('terms of service, terms, service');
+        SEOMeta::setKeywords('magnific coding kenya limited terms of service, terms of service');
         SEOMeta::setCanonical($url);
 
         OpenGraph::setTitle($title);
@@ -266,7 +266,7 @@ class PagesController extends Controller
                 ->description($desc)
                 ->url($url)
                 ->logo("https://magnificcoding.com/static/logo.png")
-                ->sameAS("https://www.magnificcoding.com")
+                ->sameAS("https://www.magnificcoding.com/terms-of-service")
                 ->contactPoint([Schema::ContactPoint()
                 ->telephone('+254 724351952')
                 ->email('magnificcoding@gmail.com')]);

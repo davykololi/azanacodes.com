@@ -29,7 +29,7 @@
               <li><i class="bi bi-chevron-right"></i> <a href="{{ route('about') }}">About</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="{{ route('contact') }}">Contact</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="{{ route('portfolio') }}">Portfolio</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="{{ route('service') }}">Terms of service</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{{ route('terms.of.service') }}">Terms of service</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="{{ route('policy') }}">Privacy policy</a></li>
             </ul>
           </div>

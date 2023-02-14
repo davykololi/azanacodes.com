@@ -59,9 +59,9 @@ Breadcrumbs::for('policy', function (BreadcrumbTrail $trail): void{
 });
 
 // Home > Terms Of Service
-Breadcrumbs::for('service', function (BreadcrumbTrail $trail): void{
+Breadcrumbs::for('terms.of.service', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Terms Of Service', route('service'));
+    $trail->push('Terms Of Service', route('terms.of.service'));
 });
 
 // Home > SEO Route
