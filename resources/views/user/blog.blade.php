@@ -39,7 +39,6 @@
     @include('tailwindcss_tutorials')<!-- Tailwind css Tutorials -->
     @include('vuejs_tutorials')<!-- Vue Js Tutorials -->
     @include('all_articles')<!-- Recent Articles -->
-    @include('about_intro')<!-- About Us Introduction -->
     @include('faq.faq')<!-- Frequently Asked Questions -->
 </main><!-- End #main -->
 @endsection

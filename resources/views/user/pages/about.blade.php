@@ -12,6 +12,7 @@
       </div>
     </section><!-- End Breadcrumbs -->
     @endsection
+    
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
 
