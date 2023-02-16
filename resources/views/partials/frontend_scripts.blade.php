@@ -1,5 +1,5 @@
 	<!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Meta Tags Scripts -->
     {!! JsonLd::generate() !!}
     <!-- Breadcrumb Scripts -->
