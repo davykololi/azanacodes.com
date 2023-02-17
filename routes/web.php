@@ -66,7 +66,7 @@ Route::controller(PagesController::class)->group(function(){
 });
 
 //Newsletter Route
-Route::post('newsletter', [NewsLetterController::class, 'store'])->name('newsletter');
+Route::post('/newsletter', [NewsLetterController::class, 'store'])->name('newsletter');
 // TinyMce Image Upload
 Route::post('/file-upload',[TinymceImageUploadController::class, 'upload'])->middleware('auth');
 // Social login routes

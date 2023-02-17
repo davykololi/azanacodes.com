@@ -17,11 +17,11 @@ class NewsLetterController extends Controller
 
             $this->clear();
 
-    		return redirect('newsletter')->withSuccess('Thanks For Subscribing');
+    		return redirect()->back()->withSuccess('Thanks For Subscribing');
     	}
         $this->clear();
 
-    	return('newsletter')->withError('Sorry! You have already subscribed');
+    	return redirect()->back()->withError('Sorry! You have already subscribed');
     }
 
     public function clear()
