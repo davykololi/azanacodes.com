@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap:https://frencymedia.com/sitemap.xml
+Sitemap:https://magnificcoding.com/sitemap.xml
 Disallow: /admin/
 Disallow: /author/
 Disallow: /editor/
