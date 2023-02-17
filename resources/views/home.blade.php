@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+          <img src="assets/img/hero-img.png" class="img-fluid" alt="Magnific Coding Kenya Limited">
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="box">
-              <img src="assets/img/values-1.png" class="img-fluid" alt="">
+              <img src="assets/img/values-1.png" class="img-fluid" alt="Values One" loading="lazy">
               <h3>Ad cupiditate sed est odio</h3>
               <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
             </div>
@@ -49,7 +49,7 @@
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
             <div class="box">
-              <img src="assets/img/values-2.png" class="img-fluid" alt="">
+              <img src="assets/img/values-2.png" class="img-fluid" alt="Values Two" loading="lazy">
               <h3>Voluptatem voluptatum alias</h3>
               <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
             </div>
@@ -57,7 +57,7 @@
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
             <div class="box">
-              <img src="assets/img/values-3.png" class="img-fluid" alt="">
+              <img src="assets/img/values-3.png" class="img-fluid" alt="Values Three" loading="lazy">
               <h3>Fugit cupiditate alias nobis.</h3>
               <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
             </div>
@@ -254,7 +254,7 @@
           </div>
 
           <div class="col-lg-6">
-            <img src="assets/img/features-2.png" class="img-fluid" alt="">
+            <img src="assets/img/features-2.png" class="img-fluid" alt="Features Two" loading="lazy">
           </div>
 
         </div><!-- End Feature Tabs -->
@@ -266,7 +266,7 @@
           <div class="row">
 
             <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-              <img src="assets/img/features-3.png" class="img-fluid p-4" alt="">
+              <img src="assets/img/features-3.png" class="img-fluid p-4" alt="Features Three" loading="lazy">
             </div>
 
             <div class="col-xl-8 d-flex content">
@@ -419,7 +419,7 @@
             <div class="box">
               <h3 style="color: #07d5c0;">Free Plan</h3>
               <div class="price"><sup>$</sup>0<span> / mo</span></div>
-              <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
+              <img src="assets/img/pricing-free.png" class="img-fluid" alt="Pricing Free" loading="lazy">
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -436,7 +436,7 @@
               <span class="featured">Featured</span>
               <h3 style="color: #65c600;">Starter Plan</h3>
               <div class="price"><sup>$</sup>19<span> / mo</span></div>
-              <img src="assets/img/pricing-starter.png" class="img-fluid" alt="">
+              <img src="assets/img/pricing-starter.png" class="img-fluid" alt=" Pricing Starter" loading="lazy">
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -452,7 +452,7 @@
             <div class="box">
               <h3 style="color: #ff901c;">Business Plan</h3>
               <div class="price"><sup>$</sup>29<span> / mo</span></div>
-              <img src="assets/img/pricing-business.png" class="img-fluid" alt="">
+              <img src="assets/img/pricing-business.png" class="img-fluid" alt=" Pricing Business" loading="lazy">
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -468,7 +468,7 @@
             <div class="box">
               <h3 style="color: #ff0071;">Ultimate Plan</h3>
               <div class="price"><sup>$</sup>49<span> / mo</span></div>
-              <img src="assets/img/pricing-ultimate.png" class="img-fluid" alt="">
+              <img src="assets/img/pricing-ultimate.png" class="img-fluid" alt="Pricing Ultimate" loading="lazy">
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -510,7 +510,7 @@
                   Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=" Testimonials One" loading="lazy">
                   <h3>Saul Goodman</h3>
                   <h4>Ceo &amp; Founder</h4>
                 </div>
@@ -526,7 +526,7 @@
                   Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="Testimonials Two" loading="lazy">
                   <h3>Sara Wilsson</h3>
                   <h4>Designer</h4>
                 </div>
@@ -542,7 +542,7 @@
                   Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="Testimonials Three" loading="lazy">
                   <h3>Jena Karlis</h3>
                   <h4>Store Owner</h4>
                 </div>
@@ -558,7 +558,7 @@
                   Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="Testimonials Four" loading="lazy">
                   <h3>Matt Brandon</h3>
                   <h4>Freelancer</h4>
                 </div>
@@ -574,7 +574,7 @@
                   Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=" Testimonials Five" loading="lazy">
                   <h3>John Larson</h3>
                   <h4>Entrepreneur</h4>
                 </div>
@@ -604,7 +604,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="Team One" loading="lazy">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -623,7 +623,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="Team Two" loading="lazy">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -642,7 +642,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="Team Three" loading="lazy">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -661,7 +661,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="Team Four" loading="lazy">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
