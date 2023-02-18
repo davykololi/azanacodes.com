@@ -54,6 +54,8 @@ return [
         '*.iso',
         '*.flv',
         '*.m4v',
-        '*.torrent'
+        '*.torrent',
+        '*/article/*',
+        '*/articles/{id}'
     ],
 ];

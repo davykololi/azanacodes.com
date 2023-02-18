@@ -222,28 +222,9 @@ class FrontEndArticleController extends Controller
                 ->whatsapp()
                 ->reddit()
                 ->telegram();
-        
-            $data = [
-                'title' => $title,
-                'article' => $article,
-                'allArticles' => $allArticles,
-                'allArticlesAside' => $allArticlesAside,
-                'shareComponent' => $shareComponent,
-                'asides' => $asides,
-                'categories' => $categories,
-                'tags' => $tags,
-                'laravel' => $laravel,
-                'laravelArticles' => $laravelArticles,
-                'reactJs' => $reactJs,
-                'reactJsArticles' => $reactJsArticles,
-                'vueJs' => $vueJs,
-                'vueJsArticles' => $vueJsArticles,
-                'tailwindCss' => $tailwindCss,
-                'tailwindCssArticles' => $tailwindCssArticles,
-            ]; 
         }
 
-        return view('user.article_details',$data);
+        return view('user.article_details',compact('title','article','allArticles','allArticlesAside','shareComponent','asides','categories','tags','laravel','laravelArticles','reactJs'.'reactJsArticles','vueJs','vueJsArticles','tailwindCss','tailwindCssArticles'));
     }
 
     public function tag($slug,Request $request)
