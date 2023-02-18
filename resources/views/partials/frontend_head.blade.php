@@ -31,14 +31,9 @@
     {{ Html::style('css/custom.css') }}
     {{ Html::style('fontawesome-5/css/all.min.css') }}
     <!-- Google Fonts -->
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css?family=Roboto:400,600|Material+Icons">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,600|Material+Icons">
-        <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
-    </noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,600|Material+Icons">
 
     <!-- Vendor CSS Files -->
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
@@ -55,9 +50,6 @@
     <!-- TinyMCE Editor -->
     <link rel="stylesheet" href="{{asset('prism/css/prism.css')}}">
     <style>
-        html{
-            font-family: Roboto;
-        }
         .hljs{
                 display: inline-block !important;
                 min-width: 100%;
