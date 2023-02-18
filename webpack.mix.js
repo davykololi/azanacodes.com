@@ -21,4 +21,5 @@ mix.js('resources/js/app.js', 'public/js')
     .copy('node_modules/admin-lte/plugins/jquery', 'public/plugins/jquery')
     .copy('node_modules/admin-lte/plugins/bootstrap/js', 'public/plugins/bootstrap/js')
     .copy('node_modules/admin-lte/plugins/chart.js', 'public/plugins/chart.js')
-    .copyDirectory('vendor/tinymce/tinymce', 'public/js/tinymce');
+    .copyDirectory('vendor/tinymce/tinymce', 'public/js/tinymce')
+    .purgeCss();
