@@ -14,8 +14,6 @@
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta property="og:site_name" content="{{config('app.name')}}">
-    <!--Google Verification Code -->
-    <meta name="google-site-verification" content="NvWTQHvlzHG8sT_chvNNX27aSHOdaA5jp77_ig_EIBQ" />
     <!-- Meta Tags -->
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
@@ -23,17 +21,17 @@
     <!-- rss feed -->
     @include('feed::links')
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('static/logo.png') }}" type="image/x-icon">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <!-- Styles -->
     {{ Html::style('css/app.css') }}
     {{ Html::style('css/custom.css') }}
-    {{ Html::style('fontawesome-5/css/all.min.css') }}
+    {{ Html::style('fontawesome/css/all.min.css') }}
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,600|Material+Icons">
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <!-- Vendor CSS Files -->
+    <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
@@ -54,10 +52,5 @@
                 display: inline-block !important;
                 min-width: 100%;
             }
-        .ctr{text-align: center;}
-        .white{color: white;font: 20px}
-        .blue{color: blue;font: 16px}
-        .bg-color{background-color: blue}
-        .width{width: 200px}
     </style>
 </head>

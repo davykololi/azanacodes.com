@@ -256,5 +256,9 @@
     "/js/tinymce/themes/silver/theme.min.js": "/js/tinymce/themes/silver/theme.min.js",
     "/js/tinymce/tinymce.d.ts": "/js/tinymce/tinymce.d.ts",
     "/js/tinymce/tinymce.js": "/js/tinymce/tinymce.js",
-    "/js/tinymce/tinymce.min.js": "/js/tinymce/tinymce.min.js"
+    "/js/tinymce/tinymce.min.js": "/js/tinymce/tinymce.min.js",
+    "/css/backend.css": "/css/backend.css",
+    "/js/backend.js": "/js/backend.js",
+    "/css/frontend.css": "/css/frontend.css",
+    "/js/frontend.js": "/js/frontend.js"
 }
