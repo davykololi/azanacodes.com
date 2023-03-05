@@ -51,6 +51,25 @@
         .hljs{
                 display: inline-block !important;
                 min-width: 100%;
+        }
+
+        app-name{
+            font-family: Elephant;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            app-name{
+                font-size: 20px;
+                text-transform: uppercase;
+                font-family: Elephant;
             }
+            header img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+
     </style>
 </head>

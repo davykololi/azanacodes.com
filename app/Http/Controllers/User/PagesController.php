@@ -60,7 +60,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','ContactPage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificcoding');
+        Twitter::setSite('@magnificCoding');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -124,7 +124,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','PortfolioPage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificcoding');
+        Twitter::setSite('@magnificCoding');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -167,7 +167,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','AboutPage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificcoding');
+        Twitter::setSite('@magnificCoding');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -210,7 +210,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','PrivatePolicyPage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificcoding');
+        Twitter::setSite('@magnificCoding');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -253,7 +253,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','TermsOfServicePage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificcoding');
+        Twitter::setSite('@magnificCoding');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 

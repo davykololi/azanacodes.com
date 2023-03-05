@@ -9,9 +9,9 @@
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="/" class="logo d-flex align-items-center">
               <img src="{{ asset('static/logo.png') }}" alt="{{ Config::get('app.name') }} logo">
-              <span>{{ Config::get('app.name') }}</span>
+              <span><app-name>{{ Config::get('app.name') }}</app-name></span>
             </a>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <p>Magnific Coding Kenya Limited is a web design and development company based in Kenya, Bungoma County along Moi Street. We design and develop websites using various technologies such as wordpress, laravel, vue js, react js, tailwind css, bootstrap css, HTML, and python. We also offer latest tutorials on the above mentioned technologies via our <a href="{{ route('blog') }}"> blog </a>. Always feel free to <a href="{{ route('contact') }}"> contact</a> us for assistance related to web design and developent. Also reach us via our social media channels below to learn more.</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>

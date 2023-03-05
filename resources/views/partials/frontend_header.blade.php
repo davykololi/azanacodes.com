@@ -3,8 +3,8 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="/" class="logo d-flex align-items-center">
-        <img src="{{ asset('static/logo.png') }}" alt="{{ Config::get('app.name') }} logo">
-        <span>{{ Config::get('app.name') }}</span>
+        <img src="{{ asset('static/logo.png') }}" alt="{{ Config::get('app.name') }} logo" height="30px" width="30px">
+        <span> <app-name>{{ Config::get('app.name') }}</app-name></span>
       </a>
 
       <nav id="navbar" class="navbar">

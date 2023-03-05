@@ -15,14 +15,14 @@ return [
             'separator'    => ' - ',
             'keywords'     => [],
             'canonical'    => false, // Set null for using Url::current(), set false to total remove
-            'robots'       => false, // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow
+            'robots'       => false, // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow 
         ],
         /*
          * Webmaster tags are always added.
          */
         'webmaster_tags' => [
-            'google'    => null,
-            'bing'      => null,
+            'google'    => true,
+            'bing'      => true,
             'alexa'     => null,
             'pinterest' => null,
             'yandex'    => null,
@@ -40,7 +40,7 @@ return [
             'description' => 'For those who helped create the Genki Dama', // set false to total remove
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => false,
-            'site_name'   => '@magnificcoding',
+            'site_name'   => '@magnificCoding',
             'images'      => [],
         ],
     ],
@@ -50,8 +50,8 @@ return [
          */
         'defaults' => [
             'card'        => 'summary_large_image',
-            'site'        => '@magnificcoding',
-            'creator' => '@magnificcoding',
+            'site'        => '@magnificCoding',
+            'creator' => '@magnificCoding',
         ],
     ],
     'json-ld' => [
@@ -62,7 +62,7 @@ return [
             'title'       => 'MagnificCoding', // set false to total remove
             'description' => 'For those who helped create the Genki Dama', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
-            'type'        => 'WebPage',
+            'type'        => false,
             'images'      => [],
             'sameAs' => 'http://www.magnificcoding.com',
             'logo' => 'https://magnificcoding.com/static/logo.png',

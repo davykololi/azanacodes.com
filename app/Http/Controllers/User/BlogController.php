@@ -49,8 +49,8 @@ class BlogController extends Controller
 
             $websiteName = config('app.name');
             $title = 'Blog';
-            $desc = 'The Magnific Coding Articles';
-            $keywords = 'magnific coding blog articles';
+            $desc = 'The Magnific Coding Blog';
+            $keywords = 'magnific coding blog';
             $url = URL::current();
             $tel = '+254724351952';
             $logo = 'https://magnificcoding.com/static/logo.jpg';
@@ -62,17 +62,17 @@ class BlogController extends Controller
             OpenGraph::setTitle($title);
             OpenGraph::setDescription($desc);
             OpenGraph::setUrl($url);
-            OpenGraph::addProperty('type','Website');
+            OpenGraph::addProperty('type','articles');
             OpenGraph::addProperty('locale','en-US');
 
             Twitter::setTitle($title);
-            Twitter::setSite('@magnificcoding');
+            Twitter::setSite('@magnificCoding');
             Twitter::setDescription($desc);
             Twitter::setUrl($url);
 
             JsonLd::setTitle($title);
             JsonLd::setDescription($desc);
-            JsonLd::setType('Website');
+            JsonLd::setType('Article');
             JsonLd::addImage($logo);
 
             $webSite = Schema::Organization()

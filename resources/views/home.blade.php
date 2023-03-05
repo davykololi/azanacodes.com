@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/hero-img.webp" class="img-fluid" alt="Magnific Coding Kenya Limited">
+          <img src="{{ asset('assets/img/hero-img.png') }}" class="img-fluid" alt="Magnific Coding Kenya Limited">
         </div>
       </div>
     </div>

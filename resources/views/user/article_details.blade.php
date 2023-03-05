@@ -72,12 +72,13 @@
             <div class="blog-author d-flex align-items-center">
               @if(!empty($article->user->profile))
               <img src="/storage/avatars/{{ $article->user->profile->image }}" class="rounded-circle float-left" alt="{{ $article->user->name }}" loading="lazy">
-              <div>
-                <h4>By <a href="{{ $article->user->path() }}">{{ $article->user->name }}</a><h4>
+              <div class="post-details">
+                <h4>Author: <a href="{{ $article->user->path() }}">{{ $article->user->name }}</a><h4>
                 <div class="social-links">
                   <a href="{{ $article->user->profile->twitter_url }}" target="_blank"><i class="bi bi-twitter"></i></a>
                   <a href="{{ $article->user->profile->facebook_url }}" target="_blank"><i class="bi bi-facebook"></i></a>
                   <a href="{{ $article->user->profile->instagram_url }}" target="_blank"><i class="biu bi-instagram"></i></a>
+                  <a href="{{ $article->user->profile->linkedin_url }}" target="_blank"><i class="biu bi-linkedin"></i></a>
                 </div>
                 <p>{!! $article->user->profile->user_details!!}</p>
               </div>
@@ -88,7 +89,8 @@
                 <div class="social-links">
                   <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
                   <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
-                  <a href="#" target="_blank"><i class="biu bi-instagram"></i></a>
+                  <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
                 <p>
                   vvvvv

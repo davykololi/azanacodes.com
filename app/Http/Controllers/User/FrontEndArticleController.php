@@ -78,7 +78,7 @@ class FrontEndArticleController extends Controller
             OpenGraph::addProperty('type','articles');
 
             Twitter::setTitle($title);
-            Twitter::setSite('@magnificcoding');
+            Twitter::setSite('@magnificCoding');
             Twitter::setDescription($desc);
             Twitter::setUrl($this->url);
             Twitter::setType('summary_large_image');
@@ -176,7 +176,12 @@ class FrontEndArticleController extends Controller
             SEOMeta::setKeywords($article->keywords);
             SEOMeta::addMeta('article:published_time', $article->created_at->toW3CString(),'property');
             SEOMeta::addMeta('article:section', strtolower($article->category->name),'property');
+            foreach($article->tags as $tag){
+                SEOMeta::addMeta('article:tag', $tag->name,'property');
+            }
+
             SEOMeta::setCanonical($this->url);
+            SEOMeta::addMeta('article:author',$article->user->name,'property');
 
             OpenGraph::setTitle($title);
             OpenGraph::setDescription($desc);
@@ -189,7 +194,7 @@ class FrontEndArticleController extends Controller
             ]);
 
             Twitter::setTitle($title);
-            Twitter::setSite('@magnificcoding');
+            Twitter::setSite('@magnificCoding');
             Twitter::setDescription($desc);
             Twitter::setUrl($this->url);
             Twitter::setImage('https://magnificcoding.com/storage/storage/'.$article->image);
@@ -269,7 +274,7 @@ class FrontEndArticleController extends Controller
             OpenGraph::addProperty('type','Place');
 
             Twitter::setTitle($title);
-            Twitter::setSite('@magnificcoding');
+            Twitter::setSite('@magnificCoding');
             Twitter::setDescription($desc);
             Twitter::setUrl($this->url);
             Twitter::setType('summary_large_image');
@@ -367,7 +372,7 @@ class FrontEndArticleController extends Controller
             OpenGraph::addProperty('type','Person');
 
             Twitter::setTitle($name);
-            Twitter::setSite('@magnificcoding');
+            Twitter::setSite('@magnificCoding');
             Twitter::setDescription($title);
             Twitter::setUrl($this->url);
             Twitter::setType('summary_large_image');
