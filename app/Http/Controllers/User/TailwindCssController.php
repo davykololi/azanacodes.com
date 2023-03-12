@@ -24,7 +24,7 @@ class TailwindCssController extends Controller
         //
         $websiteName = config('app.name');
         $title = 'Tailwind Css Design Services';
-        $desc = 'We design website using tailwind css at Magnific Coding Kenya';
+        $desc = 'We design websites using tailwind css';
         $keywords = 'Designing websites with Tailwind Css';
         $url = URL::current();
         $tel = '+254 724351952';
@@ -41,7 +41,7 @@ class TailwindCssController extends Controller
         OpenGraph::addProperty('locale','en-US');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificcoding');
+        Twitter::setSite('@magnificCoding');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -55,7 +55,7 @@ class TailwindCssController extends Controller
                 ->headline($title)
                 ->description($desc)
                 ->keywords($keywords)
-                ->email('magnificcoding@.com')
+                ->email('magnificCoding@.com')
                 ->url($url)
                 ->contactPoint(Schema::ContactPoint()->telephone($tel)->areaServed('Worldwide'))
                 ->address(Schema::PostalAddress()->addressCountry('Kenya')->postalCode('254')->streetAddress('688'))

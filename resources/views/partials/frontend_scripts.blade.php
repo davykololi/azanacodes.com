@@ -1,3 +1,12 @@
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-260368822-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-260368822-1');
+    </script>
     <!-- Meta Tags Scripts -->
     {!! JsonLd::generate() !!}
     <!-- Breadcrumb Scripts -->

@@ -67,7 +67,13 @@ Breadcrumbs::for('terms.of.service', function (BreadcrumbTrail $trail): void{
 // Home > SEO Route
 Breadcrumbs::for('services.seo', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Search Engine Optimization', route('services.seo'));
+    $trail->push('Search Engine Optimization Services', route('services.seo'));
+});
+
+// Home > Tailwind Css Route
+Breadcrumbs::for('services.tailwindcss', function (BreadcrumbTrail $trail): void{
+    $trail->parent('home');
+    $trail->push('Tailwind Css Services', route('services.tailwindcss'));
 });
 
 // Home > Backend Programming Route

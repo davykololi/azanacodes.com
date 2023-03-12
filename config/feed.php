@@ -19,7 +19,7 @@ return [
             'url' => '/feed',
 
             'title' => 'Magnific Coding Programming Articles',
-            'description' => 'Get the latest articles about programming using the latest technologies.',
+            'description' => 'Get the latest articles about programming using the latest technologies such as laravel, vue js, react js, wordpress, javascript, tailwind css and bootstrap.',
             'language' => 'en-US',
 
             /*
