@@ -46,7 +46,7 @@ class FrontEndArticleController extends Controller
             $asides = $category->articles()->latest('id')->published()->limit(10)->get();
             $categories = categories();
             $tags = Tag::eagerLoaded()->get();
-            $all = Article::published()->latest('id')->eagerLoaded();
+            $all = Article::published()->eagerLoaded();
             $allArticles = $all->inRandomOrder()->limit(10)->get();
             $allArticlesAside = $all->inRandomOrder()->limit(10)->get();
 
@@ -137,7 +137,7 @@ class FrontEndArticleController extends Controller
         }else{
             Article::where('slug',$slug)->published()->firstOrFail()->increment('total_views');
             $article = Article::where('slug',$slug)->published()->eagerLoaded()->firstOrFail();
-            $all = Article::published()->latest('id')->eagerLoaded();
+            $all = Article::published()->eagerLoaded();
             $allArticles = $all->inRandomOrder()->limit(10)->get();
             $allArticlesAside = $all->inRandomOrder()->limit(10)->get();
             $asides = $article->category->articles()->published()->inRandomOrder()->eagerLoaded()->limit(10)->get();
@@ -242,7 +242,7 @@ class FrontEndArticleController extends Controller
             $asides = $tag->articles()->published()->latest('id')->take(10)->get();
             $categories = categories();
             $tags = Tag::eagerLoaded()->get();
-            $all = Article::published()->latest('id')->eagerLoaded();
+            $all = Article::published()->eagerLoaded();
             $allArticles = $all->inRandomOrder()->limit(10)->get();
             $allArticlesAside = $all->inRandomOrder()->limit(10)->get();
 
@@ -336,7 +336,7 @@ class FrontEndArticleController extends Controller
             $asides = $author->articles()->published()->latest('id')->limit(10)->get();
             $categories = categories();
             $tags = Tag::eagerLoaded()->get();
-            $all = Article::published()->latest('id')->eagerLoaded();
+            $all = Article::published()->eagerLoaded();
             $allArticles = $all->inRandomOrder()->limit(10)->get();
             $allArticlesAside = $all->inRandomOrder()->limit(10)->get();
 
