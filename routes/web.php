@@ -52,7 +52,7 @@ Route::controller(FrontEndArticleController::class)->group(function(){
 	Route::get('/category/{slug}', 'category')->name('category.articles');
 	Route::get('/article/{slug}', 'article')->name('article.details');
 	Route::get('/tag/{slug}', 'tag')->name('tag.articles');
-	Route::get('/article-by/{slug}', 'articleBy')->name('articleBy.articles');
+	Route::get('/article-author/{slug}', 'articleBy')->name('articleBy.articles');
 });
 
 //Blog Pages Routes

@@ -72,7 +72,7 @@ class GenerateSitemap extends Command
 
         $users = User::whereRole('author')->get();
         foreach($users as $user){
-            $sitemap->add(Url::create('/article-by/'.$user->slug));
+            $sitemap->add(Url::create('/article-author/'.$user->slug));
         }
         
         $sitemap->writeToFile(public_path('sitemap.xml'));      

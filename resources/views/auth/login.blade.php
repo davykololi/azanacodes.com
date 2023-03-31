@@ -16,9 +16,9 @@
     <section class="inner-page">
       <div class="container">
         <div class="row">
-        <div class="col-lg-8 entries">
-            <div class="card">
-                <div class="card-header ctr bg-color">
+        <div class="col-lg-12 entries">
+            <div class="card text-center text-white bg-primary mb-3 border-primary">
+                <div class="card-header ctr bg-success">
                     <h1 class="white"><img src="{{ asset('static/login.png') }}" alt="login"></h1>
                 </div>
 
@@ -80,10 +80,10 @@
                             </div>
                         </div>
                         <br/>
-                        <div class="form-group row mb-0 mt-3">
-                            <label for="login with" class="col-md-4"><b class="blue">{{ __('Login With:') }}</b></label>
+                        <div class="card-footer mt-3">
+                            <div class="card-title"><b class="blue">{{ __('Login With:') }}</b></div>
                             <br/>
-                            <div class="col-md-8" id="social-links">
+                            <div class="card-img-top" id="social-links">
                                 <ul>
                                     <li><a href="{{ url('/login/twitter') }}"><i class="fab fa-twitter"></i></a></li>
                                     <li><a href="{{ url('/login/facebook') }}"><i class="fab fa-facebook"></i></a></li>

@@ -55,6 +55,8 @@ return [
         '*.flv',
         '*.m4v',
         '*.torrent',
-        '*/article/*',
+        'article/*',
+        'author/articles/*',
+        'editor/articles/*',
     ],
 ];
