@@ -108,7 +108,7 @@ class User extends Authenticatable implements BannableContract
 
     public function path()
     {
-        return route('articleBy.articles', $this->slug);
+        return route('article-author.articles', $this->slug);
     }
 
     public function isOnline()

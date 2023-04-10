@@ -1,7 +1,7 @@
             <article class="entry">
               <div class="entry-img">
                 <a href="{!! $article->path() !!}">
-                  <img src="{{ $article->imageUrl() }}" alt="{{ $article->title }}" loading="lazy" class="img-fluid">
+                  <img src="{{ $article->imageUrl() }}" alt="{{ $article->title }}" class="img-fluid">
                 </a>
               </div>
 
@@ -16,7 +16,7 @@
                   </li>
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i> 
                     <a href="{{ $article->path() }}">
-                      <time datetime="{{ $article->created_at }}">{{ $article->published_at }}</time>
+                      <time datetime="{{ $article->created_at }}">{{ $article->created_date }}</time>
                     </a>
                   </li>
                   <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> 

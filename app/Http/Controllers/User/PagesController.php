@@ -31,7 +31,7 @@ class PagesController extends Controller
     {
         $this->url = URL::current();
         $this->appLogo = URL::secureAsset('/static/logo.png');
-        $this->appSubDomain = "http://www.magnificcoding.com";
+        $this->appSubDomain = "https://www.magnificcoding.com";
         $this->appMail = 'magnificcoding@gmail.com';
         $this->orgName = config('app.name');
     }
@@ -60,7 +60,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','ContactPage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificCoding');
+        Twitter::setSite('@CodingMagnific');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -72,7 +72,7 @@ class PagesController extends Controller
                 ->name($title)
                 ->description($desc)
                 ->url($url)
-                ->logo("https://magnificcoding.com/static/logo.png")
+                ->logo("https://www.magnificcoding.com/static/logo.png")
                 ->sameAS("https://www.magnificcoding.com/contact")
                 ->contactPoint([Schema::ContactPoint()
                 ->telephone('+254 724351952')
@@ -124,7 +124,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','PortfolioPage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificCoding');
+        Twitter::setSite('@CodingMagnific');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -167,7 +167,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','AboutPage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificCoding');
+        Twitter::setSite('@CodingMagnific');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -179,7 +179,7 @@ class PagesController extends Controller
                 ->name($title)
                 ->description($desc)
                 ->url($url)
-                ->logo("https://magnificcoding.com/static/logo.png")
+                ->logo("https://www.magnificcoding.com/static/logo.png")
                 ->sameAS("https://www.magnificcoding.com/about")
                 ->contactPoint([Schema::ContactPoint()
                 ->telephone('+254 724351952')
@@ -210,7 +210,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','PrivatePolicyPage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificCoding');
+        Twitter::setSite('@CodingMagnific');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -222,7 +222,7 @@ class PagesController extends Controller
                 ->name($title)
                 ->description($desc)
                 ->url($url)
-                ->logo("https://magnificcoding.com/static/logo.png")
+                ->logo("https://www.magnificcoding.com/static/logo.png")
                 ->sameAS("https://www.magnificcoding.com/policy")
                 ->contactPoint([Schema::ContactPoint()
                 ->telephone('+254 724351952')
@@ -238,8 +238,8 @@ class PagesController extends Controller
 
     public function termsOfService()
     {
-        $title = 'Terms Of Service';
-        $desc = 'Magnific Coding Terms Of Service Page';
+        $title = 'Terms of Service';
+        $desc = 'Magnific Coding Terms of Service Page';
         $url = URL::current();
 
         SEOMeta::setTitle($title);
@@ -253,7 +253,7 @@ class PagesController extends Controller
         OpenGraph::addProperty('type','TermsOfServicePage');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificCoding');
+        Twitter::setSite('@CodingMagnific');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
@@ -265,7 +265,7 @@ class PagesController extends Controller
                 ->name($title)
                 ->description($desc)
                 ->url($url)
-                ->logo("https://magnificcoding.com/static/logo.png")
+                ->logo("https://www.magnificcoding.com/static/logo.png")
                 ->sameAS("https://www.magnificcoding.com/terms-of-service")
                 ->contactPoint([Schema::ContactPoint()
                 ->telephone('+254 724351952')

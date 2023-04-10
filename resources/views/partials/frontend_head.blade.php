@@ -23,11 +23,10 @@
     <!-- rss feed -->
     @include('feed::links')
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="{{ asset('static/logo.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('static/favicon.png') }}" type="image/x-icon">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <!-- Styles -->
-    {{ Html::style('css/app.css') }}
     {{ Html::style('css/custom.css') }}
     {{ Html::style('fontawesome/css/all.min.css') }}
     <!-- Google Fonts -->

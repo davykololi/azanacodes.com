@@ -18,7 +18,7 @@
         <div class="row">
           @include('partials.errors')
           @include('partials.messages')
-          <div class="col-lg-8 entries">
+          <div class="col-lg-8 entries scrolling-pagination">
             @if(!empty($featuredArticles))
             @forelse($featuredArticles as $article)
               @include('article')

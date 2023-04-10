@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class TailwindCssController extends Controller
+class WebDevptServiceController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -23,12 +23,13 @@ class TailwindCssController extends Controller
     {
         //
         $websiteName = config('app.name');
-        $title = 'Tailwind Css Design Services';
-        $desc = 'We design websites using tailwind css';
-        $keywords = 'Designing websites with Tailwind Css';
+        $title = 'Magnific Coding Website Development Services';
+        $service = 'Website Development Services';
+        $desc = 'The website development services offered at Magnific Coding Kenya Limited';
+        $keywords = 'web development services, website development services, web design and development services, web design and development in Kenya, web design services, web design, web development';
         $url = URL::current();
         $tel = '+254 724351952';
-        $logo = 'https://magnificcoding.com/static/logo.jpg';
+        $logo = 'https://www.magnificcoding.com/static/logo.jpg';
 
         SEOMeta::setTitle($title);
         SEOMeta::setDescription($desc);
@@ -37,33 +38,33 @@ class TailwindCssController extends Controller
         OpenGraph::setTitle($title);
         OpenGraph::setDescription($desc);
         OpenGraph::setUrl($url);
-        OpenGraph::addProperty('type','Article');
+        OpenGraph::addProperty('type','Service');
         OpenGraph::addProperty('locale','en-US');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificCoding');
+        Twitter::setSite('@CodingMagnific');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
         JsonLd::setTitle($title);
         JsonLd::setDescription($desc);
-        JsonLd::setType('Article');
+        JsonLd::setType('Service');
         JsonLd::addImage($logo);
 
-        $back = Schema::Article()
-                ->name($websiteName)
+        $back = Schema::Service()
+                ->name($service)
                 ->headline($title)
                 ->description($desc)
                 ->keywords($keywords)
-                ->email('magnificCoding@.com')
+                ->email('magnificcoding@gmail.com')
                 ->url($url)
                 ->contactPoint(Schema::ContactPoint()->telephone($tel)->areaServed('Worldwide'))
-                ->address(Schema::PostalAddress()->addressCountry('Kenya')->postalCode('254')->streetAddress('688'))
-                ->sameAS("http://www.magnificcoding.com")
+                ->address(Schema::PostalAddress()->addressCountry('Kenya')->postalCode('254')->streetAddress('5200'))
+                ->sameAS("https://www.magnificcoding.com")
                 ->logo(Schema::ImageObject()->url($logo));
                 
         echo $back->toScript();
 
-        return view('user.services.tailwindcss');
+        return view('user.services.web_devpt_service');
     }
 }

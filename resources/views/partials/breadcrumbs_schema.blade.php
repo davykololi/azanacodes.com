@@ -7,7 +7,7 @@
 @endif
 
 @if(!empty($author))
-	{{ Breadcrumbs::view('breadcrumbs::json-ld','articleBy.articles',$author)}}
+	{{ Breadcrumbs::view('breadcrumbs::json-ld','article-author.articles',$author)}}
 @endif
 
 @if(!empty($article) && ($title !== 'Home'))

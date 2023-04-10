@@ -61,25 +61,26 @@ Breadcrumbs::for('policy', function (BreadcrumbTrail $trail): void{
 // Home > Terms Of Service
 Breadcrumbs::for('terms.of.service', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Terms Of Service', route('terms.of.service'));
+    $trail->push('Terms of Service', route('terms.of.service'));
 });
+
+// Home > Services Route
+Breadcrumbs::for('services', function (BreadcrumbTrail $trail): void{
+    $trail->parent('home');
+    $trail->push('Services Offered At Magnific Coding', route('services'));
+});
+
 
 // Home > SEO Route
-Breadcrumbs::for('services.seo', function (BreadcrumbTrail $trail): void{
+Breadcrumbs::for('seo.service', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Search Engine Optimization Services', route('services.seo'));
+    $trail->push('Search Engine Optimization Services', route('seo.service'));
 });
 
-// Home > Tailwind Css Route
-Breadcrumbs::for('services.tailwindcss', function (BreadcrumbTrail $trail): void{
+// Home > Web Design & Development Route
+Breadcrumbs::for('webdevpt.service', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Tailwind Css Services', route('services.tailwindcss'));
-});
-
-// Home > Backend Programming Route
-Breadcrumbs::for('services.backend', function (BreadcrumbTrail $trail): void{
-    $trail->parent('home');
-    $trail->push('Backend Programming', route('services.backend'));
+    $trail->push('Website Design And Development Services', route('webdevpt.service'));
 });
 
 // Home > Login
@@ -132,9 +133,9 @@ Breadcrumbs::for('tag.articles', function (BreadcrumbTrail $trail, Tag $tag): vo
 });
 
 // Home > Author
-Breadcrumbs::for('articleBy.articles', function (BreadcrumbTrail $trail, User $author): void{
+Breadcrumbs::for('article-author.articles', function (BreadcrumbTrail $trail, User $author): void{
     $trail->parent('home');
-    $trail->push($author->name.' '.'Articles', route('articleBy.articles',['slug'=>$author->slug]));
+    $trail->push($author->name.' '.'Articles', route('article-author.articles',['slug'=>$author->slug]));
 });
 
 // Home > Category > Article Details

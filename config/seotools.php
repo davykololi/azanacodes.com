@@ -40,7 +40,7 @@ return [
             'description' => 'For those who helped create the Genki Dama', // set false to total remove
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => false,
-            'site_name'   => '@magnificCoding',
+            'site_name'   => '@CodingMagnific',
             'images'      => [],
         ],
     ],
@@ -50,8 +50,8 @@ return [
          */
         'defaults' => [
             'card'        => 'summary_large_image',
-            'site'        => '@magnificCoding',
-            'creator' => '@magnificCoding',
+            'site'        => '@CodingMagnific',
+            'creator' => '@CodingMagnific',
         ],
     ],
     'json-ld' => [
@@ -64,7 +64,7 @@ return [
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => false,
             'images'      => [],
-            'sameAs' => 'http://www.magnificcoding.com',
+            'sameAs' => 'https://www.magnificcoding.com',
             'logo' => 'https://magnificcoding.com/static/logo.png',
         ],
     ],

@@ -124,8 +124,9 @@ class EditorArticleController extends Controller
             $article = $this->articleService->getId($id);
             if(!$article && !Auth::user()->isEditor()){
                 DB::rollBack();
+                toastr()->error(ucwords('Something went wrong. Please try again'));
 
-                return back()->with('error','Something went wrong while updating data. Please try again');
+                return back();
             }
             DB::commit();
             Storage::delete('public/storage/'.$article->image);
@@ -155,7 +156,9 @@ class EditorArticleController extends Controller
             $article = $this->articleService->getId($id);
             if(!$article && !Auth::user()->isEditor()){
                 DB::rollBack();
-                return back()->with('error','An error occured while deleting the article. Please try again later!');
+                toastr()->error(ucwords('Something went wrong. Please try again'));
+
+                return back();
             }
             
             DB::commit();

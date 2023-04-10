@@ -43,36 +43,53 @@ class GenerateSitemap extends Command
      */
     public function handle()
     {
+        $homeUrl = "https://www.magnificcoding.com";
+        $blogUrl = "https://www.magnificcoding.com/blog";
+        $newsletterUrl = "https://www.magnificcoding.com/newsletter";
+        $contactUrl = "https://www.magnificcoding.com/contact";
+        $aboutUrl = "https://www.magnificcoding.com/about";
+        $portfolioUrl = "https://www.magnificcoding.com/portfolio";
+        $policyUrl = "https://www.magnificcoding.com/policy";
+        $tosUrl = "https://www.magnificcoding.com/terms-of-service";
+        $servicesUrl = "https://www.magnificcoding.com/services";
+        $seoServiceUrl = "https://www.magnificcoding.com/seo-service";
+        $webDevptServiceUrl = "https://www.magnificcoding.com/website-development-service";
+
         $sitemap = Sitemap::create()
-            ->add(Url::create('/'))
-            ->add(Url::create('/blog'))
-            ->add(Url::create('/newsletter'))
-            ->add(Url::create('/contact'))
-            ->add(Url::create('/about'))
-            ->add(Url::create('/portfolio'))
-            ->add(Url::create('/policy'))
-            ->add(Url::create('/terms-of-service'))
-            ->add(Url::create('/services/seo'))
-            ->add(Url::create('/services/backend'));
+            ->add($homeUrl)
+            ->add($blogUrl)
+            ->add($newsletterUrl)
+            ->add($contactUrl)
+            ->add($aboutUrl)
+            ->add($portfolioUrl)
+            ->add($policyUrl)
+            ->add($tosUrl)
+            ->add($servicesUrl)
+            ->add($seoServiceUrl)
+            ->add($webDevptServiceUrl);
 
         $categories = Category::all();
         foreach($categories as $category){
-            $sitemap->add(Url::create('/category/'.$category->slug));
+            $categoryUrl = "https://www.magnificcoding.com/category/".$category->slug;
+            $sitemap->add($categoryUrl);
         }
 
         $articles = Article::published()->get();
         foreach($articles as $article){
-            $sitemap->add(Url::create('/article/'.$article->slug));
+            $articleUrl = "https://www.magnificcoding.com/article/".$article->slug;
+            $sitemap->add($articleUrl);
         }
 
         $tags = Tag::all();
         foreach($tags as $tag){
-            $sitemap->add(Url::create('/tag/'.$tag->slug));
+            $tagUrl = "https://www.magnificcoding.com/tag/".$tag->slug;
+            $sitemap->add($tagUrl);
         }
 
         $users = User::whereRole('author')->get();
         foreach($users as $user){
-            $sitemap->add(Url::create('/article-author/'.$user->slug));
+            $authorUrl = "https://www.magnificcoding.com/article-author/".$user->slug;
+            $sitemap->add($authorUrl);
         }
         
         $sitemap->writeToFile(public_path('sitemap.xml'));      

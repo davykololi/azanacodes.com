@@ -13,7 +13,7 @@
           <li><a class="nav-link scrollto {{ request()->routeIs('blog') ? 'active':'' }}" href="{{ route('blog') }}">Blog</a></li>
           <li><a class="nav-link scrollto {{ request()->routeIs('about') ? 'active':'' }}" href="{{ route('about') }}">About</a></li>
           <li>
-            <a class="nav-link scrollto {{ request()->routeIs('services') ? 'active':'' }}" href="#services">Services</a>
+            <a class="nav-link scrollto {{ request()->routeIs('services') ? 'active':'' }}" href="{{ route('services') }}">Services</a>
           </li>
           <li><a class="nav-link scrollto {{ request()->routeIs('contact') ? 'active':'' }}" href="{{ route('contact') }}">Contact</a></li>
           <li>

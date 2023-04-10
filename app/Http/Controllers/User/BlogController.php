@@ -25,14 +25,14 @@ class BlogController extends Controller
     public function __invoke(Request $request)
     {
         //
-        if($request->has('search')){
-            $allArticles = Article::search($request->search)->paginate(2);
+        $search = $request->has('search');
+        if($search){
+            $allArticles = Article::search($request->search)->paginate(10);
         }else{
-            $featuredArticles = Article::latest()->eagerLoaded()->published()->paginate(3);
+            $featuredArticles = Article::latest('id')->eagerLoaded()->published()->paginate(2);
             $allArticles = Article::query()->published()->eagerLoaded()->inRandomOrder()->limit(10)->get();
-            $allArticlesAside = Article::published()->latest()->eagerLoaded()->inRandomOrder()->limit(10)->get();
+            $allArticlesAside = Article::published()->latest('id')->eagerLoaded()->limit(10)->get();
             $categories = categories();
-            $category = Category::eagerLoaded()->limit(10)->get();
             $tags = Tag::with('articles')->get();
 
             $laravel = Category::laravelCategory();
@@ -66,7 +66,7 @@ class BlogController extends Controller
             OpenGraph::addProperty('locale','en-US');
 
             Twitter::setTitle($title);
-            Twitter::setSite('@magnificCoding');
+            Twitter::setSite('@CodingMagnific');
             Twitter::setDescription($desc);
             Twitter::setUrl($url);
 
@@ -83,8 +83,8 @@ class BlogController extends Controller
                     ->email('magnificcoding@gmail.com')
                     ->url($url)
                     ->contactPoint(Schema::ContactPoint()->telephone($tel)->areaServed('Worldwide'))
-                    ->address(Schema::PostalAddress()->addressCountry('Kenya')->postalCode('254')->streetAddress('688'))
-                    ->sameAS("http://www.magnificcoding.com")
+                    ->address(Schema::PostalAddress()->addressCountry('Kenya')->postalCode('254')->streetAddress('5200'))
+                    ->sameAS("https://www.magnificcoding.com")
                     ->logo(Schema::ImageObject()->url($logo));
                 
             echo $webSite->toScript();
@@ -105,7 +105,7 @@ class BlogController extends Controller
                 'tailwindCss' => $tailwindCss,
                 'tailwindCssArticles' => $tailwindCssArticles,
             ];
-        }
-        return view('user.blog',$data);
+            return view('user.blog',$data);
+        }    
     }
 }

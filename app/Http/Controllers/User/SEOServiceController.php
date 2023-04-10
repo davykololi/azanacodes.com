@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class SEODetailsController extends Controller
+class SEOServiceController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -23,12 +23,13 @@ class SEODetailsController extends Controller
     {
         //
         $websiteName = config('app.name');
-        $title = 'Search Engine Optimization Services Offered At Magnific Coding Kenya Limited';
-        $desc = 'Search engine optimization services offered at Magnific Coding Kenya Limited';
-        $keywords = 'offered seo services,offered search engine optimization services';
+        $title = 'Magnific Coding Search Engine Optimization Services';
+        $service = 'Search Engine Optimization Services';
+        $desc = 'The Search Engine Optimization Services Offered at Magnific Coding Kenya Limited';
+        $keywords = 'seo services in Kenya, search engine optimization services, seo services, search engine optimization services in Kenya';
         $url = URL::current();
         $tel = '+254 724351952';
-        $logo = 'https://magnificcoding.com/static/logo.jpg';
+        $logo = 'https://www.magnificcoding.com/static/logo.jpg';
 
         SEOMeta::setTitle($title);
         SEOMeta::setDescription($desc);
@@ -37,33 +38,33 @@ class SEODetailsController extends Controller
         OpenGraph::setTitle($title);
         OpenGraph::setDescription($desc);
         OpenGraph::setUrl($url);
-        OpenGraph::addProperty('type','Article');
+        OpenGraph::addProperty('type','Service');
         OpenGraph::addProperty('locale','en-US');
 
         Twitter::setTitle($title);
-        Twitter::setSite('@magnificcoding');
+        Twitter::setSite('@CodingMagnific');
         Twitter::setDescription($desc);
         Twitter::setUrl($url);
 
         JsonLd::setTitle($title);
         JsonLd::setDescription($desc);
-        JsonLd::setType('Article');
+        JsonLd::setType('Service');
         JsonLd::addImage($logo);
 
-        $seo = Schema::Article()
-                ->name($websiteName)
+        $schema = Schema::Service()
+                ->name($service)
                 ->headline($title)
                 ->description($desc)
                 ->keywords($keywords)
-                ->email('magnificcoding@.com')
+                ->email('magnificcoding@gmail.com')
                 ->url($url)
                 ->contactPoint(Schema::ContactPoint()->telephone($tel)->areaServed('Worldwide'))
-                ->address(Schema::PostalAddress()->addressCountry('Kenya')->postalCode('254')->streetAddress('688'))
-                ->sameAS("http://www.magnificcoding.com")
+                ->address(Schema::PostalAddress()->addressCountry('Kenya')->postalCode('254')->streetAddress('5200'))
+                ->sameAS("https://www.magnificcoding.com")
                 ->logo(Schema::ImageObject()->url($logo));
                 
-        echo $seo->toScript();
+        echo $schema->toScript();
         
-        return view('user.services.seo_details');
+        return view('user.services.seo_service');
     }
 }

@@ -137,10 +137,10 @@ class Article extends Model implements Feedable
         return ($this->is_published) ? 'Yes' : 'No';
     }
 
-    public function getPublishedAtAttribute()
+    public function getCreatedDateAttribute()
     { 
         return $this->created_at->format('M d, Y');    
-    } 
+    }
 
     public function getEtagAttribute()
     {

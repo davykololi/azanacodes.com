@@ -9,5 +9,5 @@ function categories()
 
 function footer_categories()
 {
-	return Category::eagerLoaded()->get();
+	return Category::eagerLoaded()->whereIn('name',['Laravel','React Js','Tailwind Css','Vue Js'])->get();
 }

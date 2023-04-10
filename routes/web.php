@@ -19,8 +19,9 @@ use App\Http\Controllers\Author\AuthorProfileController;
 use App\Http\Controllers\Editor\EditorProfileController;
 use App\Http\Controllers\User\NewsLetterController;
 use App\Http\Controllers\Admin\FrontEndUsersController;
-use App\Http\Controllers\User\SEODetailsController;
-use App\Http\Controllers\User\TailwindCssController;
+use App\Http\Controllers\User\ServicesController;
+use App\Http\Controllers\User\SEOServiceController;
+use App\Http\Controllers\User\WebDevptServiceController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\User\UserChangePasswordController;
 use App\Http\Controllers\Admin\UserBanController;
@@ -42,17 +43,19 @@ use App\Http\Controllers\TinymceImageUploadController;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //BlogController Route
 Route::get('/blog',BlogController::class)->name('blog');
+//ServicesController Route
+Route::get('/services',ServicesController::class)->name('services');
 //SEODetails Route
-Route::get('services/seo',SEODetailsController::class)->name('services.seo');
+Route::get('/seo-service',SEOServiceController::class)->name('seo.service');
 //Backend Programming Route
-Route::get('services/taiwindcss',TailwindCssController::class)->name('services.tailwindcss');
+Route::get('/website-development-service',WebDevptServiceController::class)->name('webdevpt.service');
 //Comments Route
 Route::post('comments/store', [CommentController::class, 'store'])->name('store.comment');
 Route::controller(FrontEndArticleController::class)->group(function(){
 	Route::get('/category/{slug}', 'category')->name('category.articles');
 	Route::get('/article/{slug}', 'article')->name('article.details');
 	Route::get('/tag/{slug}', 'tag')->name('tag.articles');
-	Route::get('/article-author/{slug}', 'articleBy')->name('articleBy.articles');
+	Route::get('/article-author/{slug}', 'articleAuthor')->name('article-author.articles');
 });
 
 //Blog Pages Routes

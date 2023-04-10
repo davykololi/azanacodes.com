@@ -30,7 +30,7 @@ class FrontEndArticleController extends Controller
     {
         $this->url = URL::current();
         $this->appLogo = URL::secureAsset('/static/logo.png');
-        $this->appSubDomain = "http://www.magnificcoding.com";
+        $this->appSubDomain = "https://www.magnificcoding.com";
         $this->appMail = 'magnificcoding@gmail.com';
         $this->orgName = config('app.name');
     }
@@ -42,13 +42,13 @@ class FrontEndArticleController extends Controller
             $allArticles = Article::search($request->search)->paginate(2);
         }else{
             $category = Category::whereSlug($slug)->eagerLoaded()->firstOrFail();
-            $categoryArticles = $category->articles()->eagerLoaded()->published()->latest('id')->paginate(2);
-            $asides = $category->articles()->latest('id')->published()->limit(10)->get();
+            $categoryArticles = $category->articles()->eagerLoaded()->published()->latest('id')->paginate(10);
+            $asides = $category->articles()->latest('id')->published()->eagerLoaded()->limit(10)->get();
             $categories = categories();
             $tags = Tag::eagerLoaded()->get();
             $all = Article::published()->eagerLoaded();
             $allArticles = $all->inRandomOrder()->limit(10)->get();
-            $allArticlesAside = $all->inRandomOrder()->limit(10)->get();
+            $allArticlesAside = $all->latest('id')->limit(10)->get();
 
             $laravel = Category::laravelCategory();
             $laravelArticles = $laravel->articles()->published()->latest('id')->limit(5)->get();
@@ -78,7 +78,7 @@ class FrontEndArticleController extends Controller
             OpenGraph::addProperty('type','articles');
 
             Twitter::setTitle($title);
-            Twitter::setSite('@magnificCoding');
+            Twitter::setSite('@CodingMagnific');
             Twitter::setDescription($desc);
             Twitter::setUrl($this->url);
             Twitter::setType('summary_large_image');
@@ -88,12 +88,12 @@ class FrontEndArticleController extends Controller
             JsonLd::setType('articleSection');
         
             foreach($categoryArticles as $article){
-                OpenGraph::addImage('https://magnificcoding.com/storage/storage/'.$article->image,
-                ['secure_url' => 'https://magnificcoding.com/storage/storage/'.$article->image,
+                OpenGraph::addImage('https://www.magnificcoding.com/storage/storage/'.$article->image,
+                ['secure_url' => 'https://www.magnificcoding.com/storage/storage/'.$article->image,
                 'height'=>'628','width' =>'1200'
                 ]);
-                JsonLd::addImage('https://magnificcoding.com/storage/storage/'.$article->image);
-                Twitter::setImage('https://magnificcoding.com/storage/storage/'.$article->image);
+                JsonLd::addImage('https://www.magnificcoding.com/storage/storage/'.$article->image);
+                Twitter::setImage('https://www.magnificcoding.com/storage/storage/'.$article->image);
             }
 
             $newsArticles = Schema::Article()
@@ -139,8 +139,8 @@ class FrontEndArticleController extends Controller
             $article = Article::where('slug',$slug)->published()->eagerLoaded()->firstOrFail();
             $all = Article::published()->eagerLoaded();
             $allArticles = $all->inRandomOrder()->limit(10)->get();
-            $allArticlesAside = $all->inRandomOrder()->limit(10)->get();
-            $asides = $article->category->articles()->published()->inRandomOrder()->eagerLoaded()->limit(10)->get();
+            $allArticlesAside = $all->latest('id')->limit(10)->get();
+            $asides = $article->category->articles()->published()->latest('id')->eagerLoaded()->limit(10)->get();
             $categories = categories();
             $tags = Tag::eagerLoaded()->get();
 
@@ -161,11 +161,11 @@ class FrontEndArticleController extends Controller
             $publishedDate = $article->created_at;
             $modifiedDate = $article->updated_at;
             $author = $article->user->name;
-            $imageUrl = 'https://magnificcoding.com/storage/storage/'.$article->image;
+            $imageUrl = 'https://www.magnificcoding.com/storage/storage/'.$article->image;
             if(!empty($article->user->profile->image)){
-                $authorUrl = 'https://magnificcoding.com/storage/avatars/'.$article->user->profile->image;
+                $authorUrl = 'https://www.magnificcoding.com/storage/avatars/'.$article->user->profile->image;
             }else{
-                $authorUrl = 'https://magnificcoding.com/static/avatar.png';
+                $authorUrl = 'https://www.magnificcoding.com/static/avatar.png';
             }
             
             $width = '1200';
@@ -175,6 +175,7 @@ class FrontEndArticleController extends Controller
             SEOMeta::setDescription($desc);
             SEOMeta::setKeywords($article->keywords);
             SEOMeta::addMeta('article:published_time', $article->created_at->toW3CString(),'property');
+            SEOMeta::addMeta('article:modified_time', $article->updated_at->toW3CString(),'property');
             SEOMeta::addMeta('article:section', strtolower($article->category->name),'property');
             foreach($article->tags as $tag){
                 SEOMeta::addMeta('article:tag', $tag->name,'property');
@@ -188,22 +189,22 @@ class FrontEndArticleController extends Controller
             OpenGraph::setUrl($this->url);
             OpenGraph::addProperty('type','Article');
             OpenGraph::addProperty('locale','en-US');
-            OpenGraph::addImage('https://magnificcoding.com/storage/storage/'.$article->image,
-                ['secure_url' => 'https://magnificcoding.com/storage/storage/'.$article->image,
+            OpenGraph::addImage('https://www.magnificcoding.com/storage/storage/'.$article->image,
+                ['secure_url' => 'https://www.magnificcoding.com/storage/storage/'.$article->image,
                 'height'=>'628','width' =>'1200'
             ]);
 
             Twitter::setTitle($title);
-            Twitter::setSite('@magnificCoding');
+            Twitter::setSite('@CodingMagnific');
             Twitter::setDescription($desc);
             Twitter::setUrl($this->url);
-            Twitter::setImage('https://magnificcoding.com/storage/storage/'.$article->image);
+            Twitter::setImage('https://www.magnificcoding.com/storage/storage/'.$article->image);
             Twitter::setType('summary_large_image');
 
             JsonLd::setTitle($title);
             JsonLd::setDescription($desc);
             JsonLd::setType('Article');
-            JsonLd::addImage('https://magnificcoding.com/storage/storage/'.$article->image);
+            JsonLd::addImage('https://www.magnificcoding.com/storage/storage/'.$article->image);
 
             $newsArticles = Schema::Article()
                     ->headline($title)
@@ -238,13 +239,13 @@ class FrontEndArticleController extends Controller
             $allArticles = Article::search($request->search)->paginate(2);
         }else{
             $tag = Tag::whereSlug($slug)->eagerLoaded()->firstOrFail();
-            $tagArticles = $tag->articles()->published()->eagerLoaded()->latest()->paginate(2);
-            $asides = $tag->articles()->published()->latest('id')->take(10)->get();
+            $tagArticles = $tag->articles()->published()->eagerLoaded()->latest()->paginate(10);
+            $asides = $tag->articles()->published()->latest('id')->eagerLoaded()->take(10)->get();
             $categories = categories();
             $tags = Tag::eagerLoaded()->get();
             $all = Article::published()->eagerLoaded();
             $allArticles = $all->inRandomOrder()->limit(10)->get();
-            $allArticlesAside = $all->inRandomOrder()->limit(10)->get();
+            $allArticlesAside = $all->latest('id')->limit(10)->get();
 
             $laravel = Category::laravelCategory();
             $laravelArticles = $laravel->articles()->published()->latest('id')->limit(5)->get();
@@ -271,25 +272,25 @@ class FrontEndArticleController extends Controller
             OpenGraph::setTitle($title);
             OpenGraph::setDescription($desc);
             OpenGraph::setUrl($this->url);
-            OpenGraph::addProperty('type','Place');
+            OpenGraph::addProperty('type','Articles');
 
             Twitter::setTitle($title);
-            Twitter::setSite('@magnificCoding');
+            Twitter::setSite('@CodingMagnific');
             Twitter::setDescription($desc);
             Twitter::setUrl($this->url);
             Twitter::setType('summary_large_image');
 
             JsonLd::setTitle($title);
             JsonLd::setDescription($desc);
-            JsonLd::setType('Article');
+            JsonLd::setType('Articles');
 
             foreach($tagArticles as $article){
-                OpenGraph::addImage('https://magnificcoding.com/storage/storage/'.$article->image,
-                ['secure_url' => 'https://magnificcoding.com/storage/storage/'.$article->image,
+                OpenGraph::addImage('https://www.magnificcoding.com/storage/storage/'.$article->image,
+                ['secure_url' => 'https://www.magnificcoding.com/storage/storage/'.$article->image,
                 'height'=>'628','width' =>'1200'
                 ]);
-                JsonLd::addImage('https://magnificcoding.com/storage/storage/'.$article->image);
-                Twitter::setImage('https://magnificcoding.com/storage/storage/'.$article->image);
+                JsonLd::addImage('https://www.magnificcoding.com/storage/storage/'.$article->image);
+                Twitter::setImage('https://www.magnificcoding.com/storage/storage/'.$article->image);
             }
 
             $tagArts = Schema::Article()
@@ -326,19 +327,19 @@ class FrontEndArticleController extends Controller
         return view('user.tag.articles',$data);
     }
 
-    public function articleBy($slug,Request $request)
+    public function articleAuthor($slug,Request $request)
     {
         if($request->has('search')){
             $allArticles = Article::search($request->search)->paginate(2);
         }else{
             $author = User::whereRole('author')->whereSlug($slug)->eagerLoaded()->firstOrFail();
-            $authorArticles = $author->articles()->published()->latest('id')->eagerLoaded()->paginate(2);
-            $asides = $author->articles()->published()->latest('id')->limit(10)->get();
+            $authorArticles = $author->articles()->published()->latest('id')->eagerLoaded()->paginate(10);
+            $asides = $author->articles()->published()->latest('id')->eagerLoaded()->limit(10)->get();
             $categories = categories();
             $tags = Tag::eagerLoaded()->get();
             $all = Article::published()->eagerLoaded();
             $allArticles = $all->inRandomOrder()->limit(10)->get();
-            $allArticlesAside = $all->inRandomOrder()->limit(10)->get();
+            $allArticlesAside = $all->latest('id')->limit(10)->get();
 
             $laravel = Category::laravelCategory();
             $laravelArticles = $laravel->articles()->published()->latest('id')->limit(5)->get();
@@ -355,7 +356,7 @@ class FrontEndArticleController extends Controller
             $name = $author->name;
             $title = 'Articles By'." ".$name;
             $email = $author->email;
-            $image = 'https://magnificcoding.com/storage/storage/'.$author->image;
+            $image = 'https://www.magnificcoding.com/storage/storage/'.$author->image;
             $publishedDate = $author->created_at;
             $modifiedDate = $author->updated_at;
             $phone = $author->phone_no;
@@ -372,7 +373,7 @@ class FrontEndArticleController extends Controller
             OpenGraph::addProperty('type','Person');
 
             Twitter::setTitle($name);
-            Twitter::setSite('@magnificCoding');
+            Twitter::setSite('@CodingMagnific');
             Twitter::setDescription($title);
             Twitter::setUrl($this->url);
             Twitter::setType('summary_large_image');
@@ -382,9 +383,9 @@ class FrontEndArticleController extends Controller
             JsonLd::setType('Person');
 
             foreach($authorArticles as $article){
-                OpenGraph::addImage('https://magnificcoding.com/storage/storage/'.$article->image,['height'=>'628','width' =>'1200']);
-                JsonLd::addImage('https://magnificcoding.com/storage/storage/'.$article->image);
-                Twitter::setImage('https://magnificcoding.com/storage/storage/'.$article->image);
+                OpenGraph::addImage('https://www.magnificcoding.com/storage/storage/'.$article->image,['height'=>'628','width' =>'1200']);
+                JsonLd::addImage('https://www.magnificcoding.com/storage/storage/'.$article->image);
+                Twitter::setImage('https://www.magnificcoding.com/storage/storage/'.$article->image);
             }
 
             $userArticles = Schema::Person()

@@ -7,7 +7,11 @@
     <section class="breadcrumbs">
       <div class="container">
         <ol>
-          <li><a href="{{ URL::to('/article-by',['slug'=>$author->slug])}}">{{ Breadcrumbs::render('articleBy.articles',$author) }}</a></li>
+          <li>
+            <a href="{{ URL::to('/article-articles',['slug'=>$author->slug])}}">
+              {{ Breadcrumbs::render('article-author.articles',$author) }}
+            </a>
+          </li>
         </ol>
       </div>
     </section><!-- End Breadcrumbs -->

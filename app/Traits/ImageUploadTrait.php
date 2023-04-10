@@ -26,7 +26,7 @@ trait ImageUploadTrait{
                 $featuredImage = Image::make($originalImage->getRealPath())->resize(760,421);
                 $waterMark = Image::make(public_path('/static/logo.png'))->resize(40,40)->opacity(50);
                 $featuredImage->insert($waterMark,'bottom-right', 3, 3);
-                $featuredImage->text('© 2020-2022 frencymedia.com - All Rights Reserved', 150, 30, function($font) { 
+                $featuredImage->text('© 2020-2023 magnificcoding.com - All Rights Reserved', 150, 30, function($font) { 
                 $font->size(24);  
                 $font->color([255, 255, 255, 0.9]);  
                 $font->align('center');  
