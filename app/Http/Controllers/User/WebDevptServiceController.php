@@ -23,8 +23,7 @@ class WebDevptServiceController extends Controller
     {
         //
         $websiteName = config('app.name');
-        $title = 'Magnific Coding Website Development Services';
-        $service = 'Website Development Services';
+        $title = 'Web Design And Development Services';
         $desc = 'The website development services offered at Magnific Coding Kenya Limited';
         $keywords = 'web development services, website development services, web design and development services, web design and development in Kenya, web design services, web design, web development';
         $url = URL::current();
@@ -52,8 +51,7 @@ class WebDevptServiceController extends Controller
         JsonLd::addImage($logo);
 
         $back = Schema::Service()
-                ->name($service)
-                ->headline($title)
+                ->name($title)
                 ->description($desc)
                 ->keywords($keywords)
                 ->email('magnificcoding@gmail.com')

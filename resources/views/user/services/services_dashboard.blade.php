@@ -19,14 +19,14 @@
 
         <header class="section-header">
           <h2>Services</h2>
-          <p>We provide the following services at Magnific Coding Kenya</p>
+          <p>Magnific Coding Offered Services</p>
         </header>
 
         <div class="row gy-4">
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-box blue">
-              <i class="ri-discuss-line icon"></i>
+              <a href="{{ route('seo.service') }}"><i class="ri-discuss-line icon"></i></a>
               <h3>Search Engine Optimization Services</h3>
               <p>We have extensive knowledge in Search Engine Optimization and therefore .....</p>
               <a href="{{ route('seo.service') }}" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>

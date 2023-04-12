@@ -72,7 +72,7 @@ class BlogController extends Controller
 
             JsonLd::setTitle($title);
             JsonLd::setDescription($desc);
-            JsonLd::setType('Article');
+            JsonLd::setType('Articles');
             JsonLd::addImage($logo);
 
             $webSite = Schema::Organization()

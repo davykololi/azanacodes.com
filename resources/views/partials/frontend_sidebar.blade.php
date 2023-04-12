@@ -32,7 +32,6 @@
                 <div class="post-item clearfix">
                   <img src="{{ $art->imageUrl() }}" alt="{{ $art->title }}" loading="lazy">
                   <h4><a href="{{ $art->path() }}">{{ $art->title }}</a></h4>
-                  <time datetime="{{ $art->created_at }}">{{ $art->created_date }}</time>
                 </div>
                 @endforeach
                 @endif
@@ -45,7 +44,6 @@
                 <div class="post-item clearfix">
                   <img src="{{ $artic->imageUrl() }}" alt="{{ $artic->title }}" loading="lazy">
                   <h4><a href="{{ $artic->path() }}">{{ $artic->title }}</a></h4>
-                  <time datetime="{{ $artic->created_at }}">{{ $artic->created_date }}</time> 
                 </div>
                 @endforeach
                 @endif

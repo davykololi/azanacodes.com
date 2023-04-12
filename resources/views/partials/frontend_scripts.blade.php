@@ -14,8 +14,8 @@
     <!-- Laravel Share Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <script src="{{ asset('js/share.js') }}"></script>
-    <!--End Of Laravel Share Scripts -->
     <script src="{{ asset('fontawesome-5/js/all.min.js') }}"></script>
+    <!--End Of Laravel Share Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
    
     <!-- Vendor JS Files -->
@@ -32,8 +32,8 @@
     <script src="{{asset('prism/js/prism.js')}}"></script>
 
     <!--Start Scroll scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquer y.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jque ry.jscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquer y.min.js" defer></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jque ry.jscroll.min.js" defer></script>
 
     <script type="text/javascript">    
       $('ul.pagination').hide();

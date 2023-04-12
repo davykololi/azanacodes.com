@@ -43,44 +43,44 @@ Breadcrumbs::for('about', function (BreadcrumbTrail $trail): void{
 // Home > Contact
 Breadcrumbs::for('contact', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Contact Us', route('contact'));
+    $trail->push('Contact Us', route('contact'),['image'=>URL::secureAsset('/static/logo.png')]);
 });
 
 // Home > Portfolio
 Breadcrumbs::for('portfolio', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Portfolio', route('portfolio'));
+    $trail->push('Portfolio', route('portfolio'),['image'=>URL::secureAsset('/static/logo.png')]);
 });
 
 // Home > Private Policy
 Breadcrumbs::for('policy', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Private Policy', route('policy'));
+    $trail->push('Private Policy', route('policy'),['image'=>URL::secureAsset('/static/logo.png')]);
 });
 
 // Home > Terms Of Service
 Breadcrumbs::for('terms.of.service', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Terms of Service', route('terms.of.service'));
+    $trail->push('Terms of Service', route('terms.of.service'),['image'=>URL::secureAsset('/static/logo.png')]);
 });
 
 // Home > Services Route
 Breadcrumbs::for('services', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Services Offered At Magnific Coding', route('services'));
+    $trail->push('Magnific Coding Offered Services', route('services'),['image'=>URL::secureAsset('/static/logo.png')]);
 });
 
 
 // Home > SEO Route
 Breadcrumbs::for('seo.service', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Search Engine Optimization Services', route('seo.service'));
+    $trail->push('Search Engine Optimization Services', route('seo.service'),['image'=>URL::secureAsset('/static/logo.png')]);
 });
 
 // Home > Web Design & Development Route
 Breadcrumbs::for('webdevpt.service', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');
-    $trail->push('Website Design And Development Services', route('webdevpt.service'));
+    $trail->push('Web Design And Development Services', route('webdevpt.service'),['image'=>URL::secureAsset('/static/logo.png')]);
 });
 
 // Home > Login
@@ -122,7 +122,7 @@ Breadcrumbs::for('editor.profile', function (BreadcrumbTrail $trail): void{
 Breadcrumbs::for('category.articles', function (BreadcrumbTrail $trail, Category $category): void{
     $trail->parent('home');
     $trail->push('Blog', route('blog'));
-    $trail->push($category->name, route('category.articles',['slug'=>$category->slug]));  
+    $trail->push($category->name, route('category.articles',['slug'=>$category->slug]),['image'=>URL::secureAsset('/static/logo.png')]);  
 });
 
 // Home > Tag

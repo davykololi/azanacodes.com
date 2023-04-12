@@ -23,7 +23,7 @@ class ServicesController extends Controller
     {
         //Services Dashboard
         $websiteName = config('app.name');
-        $title = 'Services Offered At Magnific Coding';
+        $title = 'Magnific Coding Offered Services';
         $desc = 'The services offered at Magnific Coding Kenya Limited';
         $keywords = 'services offered, offered services, programming services, coding services';
         $url = URL::current();

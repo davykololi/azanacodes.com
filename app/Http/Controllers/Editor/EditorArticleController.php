@@ -119,8 +119,9 @@ class EditorArticleController extends Controller
     public function update(UpdateRequest $request, $id)
     {
         //
+        //Begin the DB transaction
+        DB::beginTransaction();
         try{
-            DB::beginTransaction();
             $article = $this->articleService->getId($id);
             if(!$article && !Auth::user()->isEditor()){
                 DB::rollBack();
@@ -128,6 +129,7 @@ class EditorArticleController extends Controller
 
                 return back();
             }
+
             DB::commit();
             Storage::delete('public/storage/'.$article->image);
             $this->articleService->updateArticle($request,$id);
@@ -151,8 +153,9 @@ class EditorArticleController extends Controller
     public function destroy($id)
     {
         //Delete the article with image
+        //Begin the DB transaction
+        DB::beginTransaction();
         try{
-            DB::beginTransaction();
             $article = $this->articleService->getId($id);
             if(!$article && !Auth::user()->isEditor()){
                 DB::rollBack();

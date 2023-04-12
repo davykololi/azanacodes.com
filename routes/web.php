@@ -48,7 +48,7 @@ Route::get('/services',ServicesController::class)->name('services');
 //SEODetails Route
 Route::get('/seo-service',SEOServiceController::class)->name('seo.service');
 //Backend Programming Route
-Route::get('/website-development-service',WebDevptServiceController::class)->name('webdevpt.service');
+Route::get('/web-design-development-service',WebDevptServiceController::class)->name('webdevpt.service');
 //Comments Route
 Route::post('comments/store', [CommentController::class, 'store'])->name('store.comment');
 Route::controller(FrontEndArticleController::class)->group(function(){

@@ -21,19 +21,19 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="{{ asset('assets/img/portfolio/portfolio-10.png') }}" alt="">
+                  <img src="{{ asset('assets/img/portfolio/portfolio-10.png') }}" alt="Magnific Coding Portfolio Page Photo">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{{ asset('assets/img/portfolio/portfolio-1.jpg') }}" alt="">
+                  <img src="{{ asset('assets/img/portfolio/portfolio-1.png') }}" alt="Magnific Coding Home Page Photo">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{{ asset('assets/img/portfolio/portfolio-2.jpg') }}" alt="">
+                  <img src="{{ asset('assets/img/portfolio/portfolio-2.png') }}" alt="Magnific Coding Portfolio Contact Page Photo">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{{ asset('assets/img/portfolio/portfolio-3.jpg') }}" alt="">
+                  <img src="{{ asset('assets/img/portfolio/portfolio-3.jpg') }}" alt="Magnific Coding Portfolio Image Three">
                 </div>
 
               </div>
@@ -45,16 +45,22 @@
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Category</strong>: Web Design & Development</li>
+                <li><strong>Client</strong>: Magnigic Coding Company</li>
+                <li><strong>Project date</strong>: 01 Dec, 2022</li>
                 <li><strong>Project URL</strong>: <a href="{{ route('home') }}">www.magnificcoding.com</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>Magnific Coding Portfolio</h2>
+              <p style="color: green;">
+                This is just some one of the project that we worked on. It's a blog application using laravel framework. The best laravel practices were employed in the development of this application hence ensuring that it meets the requirements of the end user and search engines.
+              </p> 
+              <p style="color: blue;">
+                We built nearly all types of websites and these include Corperate, E-Commerce, Saas, E-learning e.t.c. We start from idea, design, development, deployment in remote servers, continous deployment and integration.
+              </p>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                Therefore if you have any project that involves use of laravel, wordpress, react js, and vue js, don't hestate to contact us. We value our customers and will always deliver their work.You are all welcome.
               </p>
             </div>
           </div>

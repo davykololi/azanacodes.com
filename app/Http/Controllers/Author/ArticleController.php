@@ -67,9 +67,10 @@ class ArticleController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        //
+        //Store the article in DB
+        //Begin the DB transaction
+        DB::beginTransaction();
         try{
-            DB::beginTransaction();
             $article = $this->articleService->createArticle($request);
             if(!$article){
                 DB::rollBack();
@@ -121,7 +122,8 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        //Edit the article with the id
+        //Begin the DB transaction
         $article = $this->articleService->getId($id);
         $categories = $this->categoryService->all();
         $tags = $this->tagService->all()->pluck('name','id');
@@ -140,9 +142,10 @@ class ArticleController extends Controller
      */
     public function update(UpdateRequest $request, $id)
     {
-        //
+        //Update the article with the id
+        //Begin the DB transaction
+        DB::beginTransaction();
         try{
-            DB::beginTransaction();
             $article = $this->articleService->getId($id);
             if(!$article && !Auth::user()->isAuthor()){
                 DB::rollBack();
@@ -150,6 +153,7 @@ class ArticleController extends Controller
 
                 return back();
             }
+
             DB::commit();
             Storage::delete('public/storage/'.$article->image);
             $this->articleService->updateArticle($request,$id);
@@ -173,8 +177,8 @@ class ArticleController extends Controller
     public function destroy($id)
     {
         //Delete the article with image
+        DB::beginTransaction();
         try{
-            DB::beginTransaction();
             $article = $this->articleService->getId($id);
             if(!$article && !Auth::user()->isAuthor()){
                 DB::rollBack();
