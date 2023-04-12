@@ -29,7 +29,7 @@ class BlogController extends Controller
         if($search){
             $allArticles = Article::search($request->search)->paginate(10);
         }else{
-            $featuredArticles = Article::latest('id')->eagerLoaded()->published()->paginate(2);
+            $featuredArticles = Article::latest('id')->eagerLoaded()->published()->paginate(10);
             $allArticles = Article::query()->published()->eagerLoaded()->inRandomOrder()->limit(10)->get();
             $allArticlesAside = Article::published()->latest('id')->eagerLoaded()->limit(10)->get();
             $categories = categories();
