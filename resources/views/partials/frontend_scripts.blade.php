@@ -31,27 +31,6 @@
     <!-- TinyMCE Scripts -->
     <script src="{{asset('prism/js/prism.js')}}"></script>
 
-    <!--Start Scroll scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquer y.min.js" defer></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jque ry.jscroll.min.js" defer></script>
-
-    <script type="text/javascript">    
-      $('ul.pagination').hide();
-      $(function(){        
-        $('.scrolling-pagination').jscroll({            
-          autoTrigger: true,            
-          padding: 0,            
-          nextSelector: '.pagination li.active + li a',            
-          contentSelector: 'div.scrolling-pagination',            
-          callback: function(){                
-            $('ul.pagination').remove();            
-          }        
-        });    
-      }); 
-    </script>
-    <!--End Scroll scripts -->
-
-    
 <script>
   window.fbAsyncInit = function() {
     FB.init({
