@@ -54,3 +54,6 @@
 	{{ Breadcrumbs::view('breadcrumbs::json-ld','webdevpt.service')}}
 @endif
 
+@if(request()->routeIs('team'))
+	{{ Breadcrumbs::view('breadcrumbs::json-ld','team')}}
+@endif

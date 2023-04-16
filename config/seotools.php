@@ -14,7 +14,7 @@ return [
             'description'  => 'For those who helped create the Genki Dama', // set false to total remove
             'separator'    => ' - ',
             'keywords'     => [],
-            'canonical'    => false, // Set null for using Url::current(), set false to total remove
+            'canonical'    => null, // Set null for using Url::current(), set false to total remove
             'robots'       => false, // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow 
         ],
         /*
@@ -40,7 +40,7 @@ return [
             'description' => 'For those who helped create the Genki Dama', // set false to total remove
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => false,
-            'site_name'   => '@CodingMagnific',
+            'site_name'   => config('app.name'),
             'images'      => [],
         ],
     ],
@@ -61,11 +61,11 @@ return [
         'defaults' => [
             'title'       => 'MagnificCoding', // set false to total remove
             'description' => 'For those who helped create the Genki Dama', // set false to total remove
-            'url'         => false, // Set null for using Url::current(), set false to total remove
+            'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => false,
             'images'      => [],
             'sameAs' => 'https://www.magnificcoding.com',
-            'logo' => 'https://magnificcoding.com/static/logo.png',
+            'logo' => 'https://www.magnificcoding.com/static/logo.png',
         ],
     ],
 ];

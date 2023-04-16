@@ -5930,3 +5930,33 @@ section {
   font-size: 13px;
   color: #012970;
 }
+
+
+
+
+.seo h1 {
+  color: green; margin-top: -30px;
+}
+.seo .seo-content {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .seo h1 {
+    font-size: 24px;
+    color:blue;
+  }
+}
+
+@media (max-width: 768px) {
+  .seo .seo-content {
+    padding-top: 0;
+    font-size: 18px;
+    line-height: 1cm;
+  }
+}
+
+.post-details p {
+  font-size: 16px;
+}

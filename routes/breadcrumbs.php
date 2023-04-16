@@ -83,6 +83,12 @@ Breadcrumbs::for('webdevpt.service', function (BreadcrumbTrail $trail): void{
     $trail->push('Web Design And Development Services', route('webdevpt.service'),['image'=>URL::secureAsset('/static/logo.png')]);
 });
 
+// Home > Team Route
+Breadcrumbs::for('team', function (BreadcrumbTrail $trail): void{
+    $trail->parent('home');
+    $trail->push('Magnific Coding Team', route('team'),['image'=>URL::secureAsset('/static/logo.png')]);
+});
+
 // Home > Login
 Breadcrumbs::for('login', function (BreadcrumbTrail $trail): void{
     $trail->parent('home');

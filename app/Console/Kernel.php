@@ -27,6 +27,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         if(app('env') == 'production'){
+            $schedule->command('cache:prune-stale-tags')->hourly();
             $schedule->command('sitemap:generate')->daily();
             $schedule->command('backup:clean')->daily()->at('01:00');
             $schedule->command('backup:run')->daily()->at('02:00')->onFailure(function(){

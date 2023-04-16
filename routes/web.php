@@ -22,6 +22,7 @@ use App\Http\Controllers\Admin\FrontEndUsersController;
 use App\Http\Controllers\User\ServicesController;
 use App\Http\Controllers\User\SEOServiceController;
 use App\Http\Controllers\User\WebDevptServiceController;
+use App\Http\Controllers\User\TeamController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\User\UserChangePasswordController;
 use App\Http\Controllers\Admin\UserBanController;
@@ -49,6 +50,8 @@ Route::get('/services',ServicesController::class)->name('services');
 Route::get('/seo-service',SEOServiceController::class)->name('seo.service');
 //Backend Programming Route
 Route::get('/web-design-development-service',WebDevptServiceController::class)->name('webdevpt.service');
+//Team Route
+Route::get('/organization-team',TeamController::class)->name('team');
 //Comments Route
 Route::post('comments/store', [CommentController::class, 'store'])->name('store.comment');
 Route::controller(FrontEndArticleController::class)->group(function(){
@@ -107,7 +110,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth','admin','impersonate.
 
 Route::prefix('editor')->name('editor.')->middleware(['auth','editor','can:isEditor','admin_ban','doNotCacheResponse','password.confirm'])->group(function(){
 	Route::get('/dashboard',EditorController::class)->name('dashboard');
-	Route::resource('/articles',EditorArticleController::class);
+	Route::resource('/articles',EditorArticleController::class)->middleware('optimizeImages');
 	Route::get('impersonate-leave',[ImpersonateController::class,'impersonateLeave'])->name('impersonate-leave');
 	//Role Editor Profile
 	Route::get('/profile/dashboard',  [EditorProfileController::class, 'profileDashboard'])->name('profile.dashboard');
@@ -116,7 +119,7 @@ Route::prefix('editor')->name('editor.')->middleware(['auth','editor','can:isEdi
 });
 
 Route::prefix('author')->name('author.')->middleware(['auth','author','can:isAuthor','admin_ban','doNotCacheResponse','password.confirm'])->group(function(){
-	Route::get('/dashboard',AuthorController::class)->name('dashboard');
+	Route::get('/dashboard',AuthorController::class)->name('dashboard')->middleware('optimizeImages');
 	Route::resource('/articles',ArticleController::class);
 	Route::get('impersonate-leave',[ImpersonateController::class,'impersonateLeave'])->name('impersonate-leave');
 	Route::post('/upload-image',[CKEditorController::class,'upload'])->name('upload');

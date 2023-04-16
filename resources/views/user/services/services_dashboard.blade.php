@@ -35,7 +35,7 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-box orange">
-              <i class="ri-discuss-line icon"></i>
+              <a href="{{ route('webdevpt.service') }}"><i class="ri-discuss-line icon"></i></a>
               <h3>Web Design And Development Services</h3>
               <p>We design and develop beautiful websites using the latest technologies.</p>
               <a href="{{ route('webdevpt.service') }}" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>

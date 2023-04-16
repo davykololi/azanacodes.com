@@ -16,6 +16,8 @@
     <meta property="og:site_name" content="{{config('app.name')}}">
     <!-- Google Verification code -->
     <meta name="google-site-verification" content="NvWTQHvlzHG8sT_chvNNX27aSHOdaA5jp77_ig_EIBQ" />
+    <!-- Yandex Verification code -->
+    <meta name="yandex-verification" content="f203a3de5b436efa" />
     <!-- Meta Tags -->
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}

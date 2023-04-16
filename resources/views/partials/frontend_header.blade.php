@@ -19,7 +19,7 @@
           <li>
             <a class="nav-link scrollto {{ request()->routeIs('portfolio') ? 'active':'' }}" href="{{ route('portfolio') }}">Portfolio</a>
           </li>
-          <li><a class="nav-link scrollto {{ request()->routeIs('team') ? 'active':'' }}" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto {{ request()->routeIs('team') ? 'active':'' }}" href="{{ route('team') }}">Team</a></li>
           <li class="dropdown"><a href="#"><span>Categories</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               @if(!empty($categories))

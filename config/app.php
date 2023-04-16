@@ -166,16 +166,15 @@ return [
          * Package Service Providers...
          */
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
         Cog\Laravel\Ban\Providers\BanServiceProvider::class,
-        Lab404\Impersonate\ImpersonateServiceProvider::class,
-        Alaouy\Youtube\YoutubeServiceProvider::class,
-        Jorenvh\Share\Providers\ShareServiceProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class,
-        Yoeunes\Toastr\ToastrServiceProvider::class,
-        Spatie\Backup\BackupServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-        Laravel\Scout\ScoutServiceProvider::class,
+        Jorenvh\Share\Providers\ShareServiceProvider::class,
+        Lab404\Impersonate\ImpersonateServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Spatie\Backup\BackupServiceProvider::class,
+        Alaouy\Youtube\YoutubeServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
         
         /*
          * Application Service Providers...
@@ -245,12 +244,13 @@ return [
         'Twitter'       => Artesaos\SEOTools\Facades\TwitterCard::class,
         'JsonLd'        => Artesaos\SEOTools\Facades\JsonLd::class,
         'JsonLdMulti'   => Artesaos\SEOTools\Facades\JsonLdMulti::class,
-        'Youtube' => Alaouy\Youtube\Facades\Youtube::class,
+        'Image' => Intervention\Image\Facades\Image::class,
         'Share' => Jorenvh\Share\ShareFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Image' => Intervention\Image\Facades\Image::class,
+        'Youtube' => Alaouy\Youtube\Facades\Youtube::class,
+        'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
     ],
 
 ];

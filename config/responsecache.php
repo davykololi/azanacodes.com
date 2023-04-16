@@ -16,6 +16,15 @@ return [
     'cache_profile' => Spatie\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests::class,
 
     /*
+     *  Optionally, you can specify a header that will force a cache bypass.
+     *  This can be useful to monitor the performance of your application.
+     */
+    'cache_bypass_header' => [
+        'name' => env('CACHE_BYPASS_HEADER_NAME', null),
+        'value' => env('CACHE_BYPASS_HEADER_VALUE', null),
+    ],
+
+    /*
      * When using the default CacheRequestFilter this setting controls the
      * default number of seconds responses must be cached.
      */
@@ -33,6 +42,20 @@ return [
      * the time at which the response was cached
      */
     'cache_time_header_name' => env('RESPONSE_CACHE_HEADER_NAME', 'laravel-responsecache'),
+
+    /*
+     * This setting determines if a http header named with the cache age
+     * should be added to a cached response. This can be handy when
+     * debugging.
+     * ONLY works when "add_cache_time_header" is also active!
+     */
+    'add_cache_age_header' => env('RESPONSE_CACHE_AGE_HEADER', false),
+
+    /*
+     * This setting determines the name of the http header that contains
+     * the age of cache
+     */
+    'cache_age_header_name' => env('RESPONSE_CACHE_AGE_HEADER_NAME', 'laravel-responsecache-age'),
 
     /*
      * Here you may define the cache store that should be used to store
@@ -60,7 +83,7 @@ return [
 
     /*
      * This class is responsible for generating a hash for a request. This hash
-     * is used to look up an cached response.
+     * is used to look up a cached response.
      */
     'hasher' => \Spatie\ResponseCache\Hasher\DefaultHasher::class,
 

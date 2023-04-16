@@ -25,9 +25,7 @@ class AuthServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        $this->registerPolicies();
-        
+    { 
         /* define an admin user role */
         Gate::define('isAdmin',function(User $user){
             return $user->role == UserRoleEnum::Admin;
