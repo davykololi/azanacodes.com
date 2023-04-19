@@ -25,7 +25,7 @@ return [
             'bing'      => true,
             'alexa'     => null,
             'pinterest' => null,
-            'yandex'    => null,
+            'yandex'    => true,
             'norton'    => null,
         ],
 

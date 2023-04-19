@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Paginator::useBootstrapFive();
-        Model::preventLazyLoading(! app()->isProduction());
+        Model::preventLazyLoading(!app()->isProduction());
         DB::whenQueryingForLongerThan(500, function(Connection $connection){
             Log::warning("Database queries exceeded 5 seconds on {$connection->getName()}");
         });
