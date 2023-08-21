@@ -17,8 +17,8 @@
       <div class="container">
         <div class="row">
         <div class="col-lg-12 entries">
-            <div class="card text-center text-white bg-primary mb-3 border-primary">
-                <div class="card-header ctr bg-success">
+            <div class="card mb-3 border-primary" id="auth-card">
+                <div class="card-header ctr" style="text-align: center;background-color: darkblue;">
                     <h1 class="white"><img src="{{ asset('static/login.png') }}" alt="login"></h1>
                 </div>
 
@@ -30,8 +30,8 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf 
 
-                        <div class="form-group row">
-                            <div class="col-md-6">
+                        <div class="form-group row" id="auth-padding">
+                            <div class="col-md-12" style="margin-bottom: 20px;">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Enter Email Address" autofocus>
 
                                 @error('email')
@@ -42,8 +42,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6">
+                        <div class="form-group row" id="auth-padding">
+                            <div class="col-md-12" style="margin-bottom: 20px;">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Enter Password">
 
                                 @error('password')
@@ -54,8 +54,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6">
+                        <div class="form-group row" id="auth-padding">
+                            <div class="col-md-12">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" value="{{ old('remember') ? 'checked' : '' }}">
 
@@ -66,9 +66,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8">
-                                <button type="submit" class="btn btn-primary">
+                        <div class="form-group row" id="auth-padding">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary btn-sm">
                                     {{ __('Login') }}
                                 </button>
 

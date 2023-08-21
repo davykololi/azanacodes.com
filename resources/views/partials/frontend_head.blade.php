@@ -74,5 +74,14 @@
             }
         }
 
+        @media only screen and (min-width: 767px){
+            #auth-card{
+                margin-left: 300px;margin-right: 300px;
+            }
+            #auth-padding{
+                padding-left: 20px;padding-right: 20px;
+            }
+        }
+
     </style>
 </head>
