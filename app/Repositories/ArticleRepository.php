@@ -44,15 +44,9 @@ class ArticleRepository implements ArticleInterface
         return $this->query()->create($data);
     }
 
-    public function getId(int $id): Article
-    {
-        try {
-            // the published_at + is_published are handled by BlogEtcPublishedScope, and don't take effect if the
-            // logged in user can manage log posts
-            return $this->model->findOrFail($id);
-        } catch (ModelNotFoundException $e) {
-            throw new ArticleNotFoundException('Unable to find blog post with id: '.$id);
-        }
+    public function getId(int $id)
+    {  
+        return $this->model->findOrFail($id);
     }
 
     public function update(array $data,$id)

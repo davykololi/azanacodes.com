@@ -8,7 +8,6 @@ use App\Models\User;
 use App\Services\ArticleService;
 use App\Services\CategoryService;
 use App\Services\TagService;
-use App\Enums\UserRoleEnum;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
@@ -103,7 +102,7 @@ class EditorArticleController extends Controller
         $categories = $this->categoryService->all();
         $tags = $this->tagService->all()->pluck('name','id');
         $articleTags = $article->tags;
-        $authors = User::whereRole(UserRoleEnum::Author)->get();
+        $authors = User::whereRole('author')->get();
         $title = 'Editor Edit Article';
 
         return view('editor.articles.edit',compact('article','categories','tags','articleTags','authors','title'));
@@ -118,19 +117,8 @@ class EditorArticleController extends Controller
      */
     public function update(UpdateRequest $request, $id)
     {
-        //
-        //Begin the DB transaction
-        DB::beginTransaction();
-        try{
-            $article = $this->articleService->getId($id);
-            if(!$article && !Auth::user()->isEditor()){
-                DB::rollBack();
-                toastr()->error(ucwords('Something went wrong. Please try again'));
-
-                return back();
-            }
-
-            DB::commit();
+        $article = $this->articleService->getId($id);
+        if($article && Auth::user()->isEditor()){
             Storage::delete('public/storage/'.$article->image);
             $this->articleService->updateArticle($request,$id);
             $tags = $request->tags;
@@ -138,10 +126,9 @@ class EditorArticleController extends Controller
             toastr()->success(ucwords($article->title." ".'Article updated successfully'));
 
             return redirect()->route('editor.articles.index');
-        } catch (\Throwable $th){
-            DB::rollBack();
-            throw $th;
-        } 
+        }
+        toastr()->error(ucwords('An error occured. Please try again.'));
+        return redirect()->route('editor.articles.edit',$article->id);      
     }
 
     /**
@@ -152,29 +139,14 @@ class EditorArticleController extends Controller
      */
     public function destroy($id)
     {
-        //Delete the article with image
-        //Begin the DB transaction
-        DB::beginTransaction();
-        try{
-            $article = $this->articleService->getId($id);
-            if(!$article && !Auth::user()->isEditor()){
-                DB::rollBack();
-                toastr()->error(ucwords('Something went wrong. Please try again'));
-
-                return back();
-            }
-            
-            DB::commit();
+        $article = $this->articleService->getId($id);
+        if($article){
             Storage::delete('public/storage/'.$article->image);
             $this->articleService->deleteArticle($id);
             $article->tags()->detach();
             toastr()->success(ucwords($article->title." ".'Article deleted successfully'));
-            
-            return redirect()->route('editor.articles.index');
-
-        } catch(\Throwable $th){
-            DB::rollBack();
-            throw $th;
         }
+        toastr()->error(ucwords('Something went wrong. Please try again'));
+        return redirect()->route('editor.articles.index');
     }
 }

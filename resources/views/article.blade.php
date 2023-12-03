@@ -22,6 +22,12 @@
                   <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> 
                     <a href="{{ $article->path() }}">{{ $article->comments->count() }} Comments</a>
                   </li>
+                  <li class="d-flex align-items-center">
+                    Tags:
+                    @foreach($article->tags as $tag)
+                      <a href="{{ URL::to('/tag',['slug'=>$tag->slug])}}">{{ $tag->name }}</a>
+                    @endforeach
+                  </li>
                 </ul>
               </div>
 

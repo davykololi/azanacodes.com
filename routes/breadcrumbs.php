@@ -149,5 +149,5 @@ Breadcrumbs::for('article.details', function (BreadcrumbTrail $trail, Article $a
     $trail->parent('home');
     $trail->push('Blog', route('blog'));
     $trail->push($article->category->name, route('category.articles',['slug'=>$article->category->slug]));
-    $trail->push($article->title, route('article.details',['slug'=>$article->slug]),['image'=>URL::secureAsset('/storage/storage/'.$article->image)]);
+    $trail->push($article->title, route('article.details',['published_at'=>$article->published_at,'slug'=>$article->slug]),['image'=>URL::secureAsset('/storage/storage/'.$article->image)]);
 });

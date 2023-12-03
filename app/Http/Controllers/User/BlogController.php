@@ -52,12 +52,13 @@ class BlogController extends Controller
             $desc = 'The Magnific Coding Blog';
             $keywords = 'magnific coding blog';
             $url = URL::current();
+            $canonicalUrl = addWwwToUrl($url);
             $tel = '+254724351952';
             $logo = 'https://magnificcoding.com/static/logo.jpg';
 
             SEOMeta::setTitle($title);
             SEOMeta::setDescription($desc);
-            SEOMeta::setCanonical($url);
+            SEOMeta::setCanonical($canonicalUrl);
 
             OpenGraph::setTitle($title);
             OpenGraph::setDescription($desc);

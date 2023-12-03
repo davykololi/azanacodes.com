@@ -67,28 +67,12 @@ class ArticleController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        //Store the article in DB
-        //Begin the DB transaction
-        DB::beginTransaction();
-        try{
-            $article = $this->articleService->createArticle($request);
-            if(!$article){
-                DB::rollBack();
-                toastr()->error(ucwords('Something went wrong. Please try again'));
+        $article = $this->articleService->createArticle($request);
+        $tags = $request->tags;
+        $article->tags()->sync($tags);
+        toastr()->success(ucwords($article->title." ".'Article created successfully'));
 
-                return back();
-            }
-
-            DB::commit();
-            $tags = $request->tags;
-            $article->tags()->sync($tags);
-            toastr()->success(ucwords($article->title." ".'Article created successfully'));
-
-            return redirect()->route('author.articles.index');
-        } catch(\Throwable $th){
-            DB::rollBack();
-            throw $th;
-        }
+        return redirect()->route('author.articles.index');
     }
 
     /**
@@ -110,7 +94,7 @@ class ArticleController extends Controller
         } else {
             toastr()->error(ucwords('You have no sufficient permission to view this article'));
 
-        	return redirect('/');
+        	return redirect()->route('author.articles.index');
         }    
     }
 
@@ -142,19 +126,8 @@ class ArticleController extends Controller
      */
     public function update(UpdateRequest $request, $id)
     {
-        //Update the article with the id
-        //Begin the DB transaction
-        DB::beginTransaction();
-        try{
-            $article = $this->articleService->getId($id);
-            if(!$article && !Auth::user()->isAuthor()){
-                DB::rollBack();
-                toastr()->error(ucwords('Something went wrong. Please try again'));
-
-                return back();
-            }
-
-            DB::commit();
+        $article = $this->articleService->getId($id);
+        if($article){
             Storage::delete('public/storage/'.$article->image);
             $this->articleService->updateArticle($request,$id);
             $tags = $request->tags;
@@ -162,9 +135,6 @@ class ArticleController extends Controller
             toastr()->success(ucwords($article->title." ".'Article updated successfully'));
 
             return redirect()->route('author.articles.index');
-        } catch (\Throwable $th){
-            DB::rollBack();
-            throw $th;
         } 
     }
 
@@ -176,28 +146,16 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        //Delete the article with image
-        DB::beginTransaction();
-        try{
-            $article = $this->articleService->getId($id);
-            if(!$article && !Auth::user()->isAuthor()){
-                DB::rollBack();
-                toastr()->error(ucwords('Something went wrong. Please try again'));
-
-                return back();
-            }
-            
-            DB::commit();
+        $article = $this->articleService->getId($id);
+        if($article && Auth::user()->isAuthor()){
             Storage::delete('public/storage/'.$article->image);
             $this->articleService->deleteArticle($id);
             $article->tags()->detach();
             toastr()->success(ucwords($article->title." ".'Article deleted successfully'));
             
             return redirect()->route('author.articles.index');
-
-        } catch(\Throwable $th){
-            DB::rollBack();
-            throw $th;
         }
+        toastr()->error(ucwords('Something went wrong. Please try again'));
+        return redirect()->route('author.articles.index');
     }
 }

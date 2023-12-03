@@ -27,11 +27,12 @@ trait ImageUploadTrait{
                 $waterMark = Image::make(public_path('/static/logo.png'))->resize(40,40)->opacity(50);
                 $featuredImage->insert($waterMark,'bottom-right', 3, 3);
                 $featuredImage->text('© 2020-2023 magnificcoding.com - All Rights Reserved', 150, 30, function($font) { 
+                $font->file(public_path('fonts2/voodoo/voodoo-vampire.ttf'));
                 $font->size(24);  
                 $font->color([255, 255, 255, 0.9]);  
-                $font->align('center');  
+                $font->align('middle');  
                 $font->valign('top');  
-                $font->angle(90);  
+                $font->angle(0);  
                 });
                 $featuredImagePath = public_path().$directory;
                 $featuredImage->save($featuredImagePath.$filename.'_'.time().'.'.$extension);

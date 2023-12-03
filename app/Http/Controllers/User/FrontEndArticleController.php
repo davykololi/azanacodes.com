@@ -17,22 +17,24 @@ use Spatie\SchemaOrg\Schema;
 use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Services\ArticleService;
 
 class FrontEndArticleController extends Controller
 {
-    protected $url,$appLogo,$appSubDomain,$appMail,$orgName;
+    protected $url,$appLogo,$appSubDomain,$appMail,$orgName, $articleService;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(ArticleService $articleService)
     {
         $this->url = URL::current();
         $this->appLogo = URL::secureAsset('/static/logo.png');
         $this->appSubDomain = "https://www.magnificcoding.com";
         $this->appMail = 'magnificcoding@gmail.com';
         $this->orgName = config('app.name');
+        $this->articleService = $articleService;
     }
 
     // Category Articles
@@ -66,11 +68,13 @@ class FrontEndArticleController extends Controller
             $desc = $category->description;
             $publishedDate = $category->created_at;
             $modifiedDate = $category->updated_at;
+            $url = $this->url;
+            $canonicalUrl = addWwwToUrl($url);
 
             SEOMeta::setTitle($title);
             SEOMeta::setDescription($desc);
             SEOMeta::setKeywords($category->keywords);
-            SEOMeta::setCanonical($this->url);
+            SEOMeta::setCanonical($canonicalUrl);
 
             OpenGraph::setTitle($title);
             OpenGraph::setDescription($desc);
@@ -130,13 +134,13 @@ class FrontEndArticleController extends Controller
         return view('user.category.articles',$data);
     }
     
-    public function article($slug,Request $request)
+    public function article($published_at,$slug,Request $request)
     {
         if($request->has('search')){
             $allArticles = Article::search($request->search)->paginate(2);
         }else{
-            Article::where('slug',$slug)->published()->firstOrFail()->increment('total_views');
-            $article = Article::where('slug',$slug)->published()->eagerLoaded()->firstOrFail();
+            Article::where(['published_at'=>$published_at,'slug'=>$slug])->published()->firstOrFail()->increment('total_views');
+            $article = Article::where(['published_at'=>$published_at,'slug'=>$slug])->published()->eagerLoaded()->firstOrFail();
             $all = Article::published()->eagerLoaded();
             $allArticles = $all->inRandomOrder()->limit(10)->get();
             $allArticlesAside = $all->latest('id')->limit(10)->get();
@@ -161,6 +165,9 @@ class FrontEndArticleController extends Controller
             $publishedDate = $article->created_at;
             $modifiedDate = $article->updated_at;
             $author = $article->user->name;
+            $url = $this->url;
+            $canonicalUrl = addWwwToUrl($url);
+
             $imageUrl = 'https://www.magnificcoding.com/storage/storage/'.$article->image;
             if(!empty($article->user->profile->image)){
                 $authorUrl = 'https://www.magnificcoding.com/storage/avatars/'.$article->user->profile->image;
@@ -181,7 +188,7 @@ class FrontEndArticleController extends Controller
                 SEOMeta::addMeta('article:tag', $tag->name,'property');
             }
 
-            SEOMeta::setCanonical($this->url);
+            SEOMeta::setCanonical($canonicalUrl);
             SEOMeta::addMeta('article:author',$article->user->name,'property');
 
             OpenGraph::setTitle($title);
@@ -263,11 +270,13 @@ class FrontEndArticleController extends Controller
             $desc = $tag->description;
             $publishedDate = $tag->created_at;
             $modifiedDate = $tag->updated_at;
+            $url = $this->url;
+            $canonicalUrl = addWwwToUrl($url);
 
             SEOMeta::setTitle($title);
             SEOMeta::setDescription($desc);
             SEOMeta::setKeywords($tag->keywords);
-            SEOMeta::setCanonical($this->url);
+            SEOMeta::setCanonical($canonicalUrl);
 
             OpenGraph::setTitle($title);
             OpenGraph::setDescription($desc);
@@ -361,11 +370,13 @@ class FrontEndArticleController extends Controller
             $modifiedDate = $author->updated_at;
             $phone = $author->phone_no;
             $area = $author->area;
+            $url = $this->url;
+            $canonicalUrl = addWwwToUrl($url);
 
             SEOMeta::setTitle($name);
             SEOMeta::setDescription($title);
             SEOMeta::setKeywords($author->keywords);
-            SEOMeta::setCanonical($this->url);
+            SEOMeta::setCanonical($canonicalUrl);
 
             OpenGraph::setTitle($name);
             OpenGraph::setDescription($title);

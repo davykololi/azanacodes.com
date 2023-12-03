@@ -55,10 +55,10 @@ Route::get('/organization-team',TeamController::class)->name('team');
 //Comments Route
 Route::post('comments/store', [CommentController::class, 'store'])->name('store.comment');
 Route::controller(FrontEndArticleController::class)->group(function(){
-	Route::get('/category/{slug}', 'category')->name('category.articles');
-	Route::get('/article/{slug}', 'article')->name('article.details');
-	Route::get('/tag/{slug}', 'tag')->name('tag.articles');
-	Route::get('/article-author/{slug}', 'articleAuthor')->name('article-author.articles');
+	Route::get('/category/{slug}/', 'category')->name('category.articles');
+	Route::get('/article/{published_at}/{slug}/', 'article')->name('article.details');
+	Route::get('/tag/{slug}/', 'tag')->name('tag.articles');
+	Route::get('/article-author/{slug}/', 'articleAuthor')->name('article-author.articles');
 });
 
 //Blog Pages Routes

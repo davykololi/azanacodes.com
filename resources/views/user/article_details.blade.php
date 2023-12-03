@@ -44,6 +44,12 @@
                       @endif
                     </a>
                   </li>
+                  <li class="d-flex align-items-center">
+                    Tags:
+                    @foreach($article->tags as $tag)
+                      <a href="{{ URL::to('/tag',['slug'=>$tag->slug])}}">{{ $tag->name }}</a>
+                    @endforeach
+                  </li>
                 </ul>
               </div>
               <div class="entry-content">
@@ -66,6 +72,7 @@
               <div class="container mt-4 text-center " loading="lazy">
                 <h5><b>Share On:</b></h5>
                 {!! $shareComponent !!}
+                <div class="shareit">{!! $shareComponent !!}</div>
               </div><!-- End Social Media Share -->
               
             </article><!-- End blog entry -->

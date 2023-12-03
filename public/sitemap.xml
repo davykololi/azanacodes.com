@@ -1,135 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
         <loc>https://www.magnificcoding.com</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
         <loc>https://www.magnificcoding.com/blog</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
         <loc>https://www.magnificcoding.com/newsletter</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
         <loc>https://www.magnificcoding.com/contact</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
         <loc>https://www.magnificcoding.com/about</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
         <loc>https://www.magnificcoding.com/portfolio</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
         <loc>https://www.magnificcoding.com/policy</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
         <loc>https://www.magnificcoding.com/terms-of-service</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
         <loc>https://www.magnificcoding.com/services</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
         <loc>https://www.magnificcoding.com/seo-service</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
         <loc>https://www.magnificcoding.com/website-development-service</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
+    <url>
+        <loc>https://www.magnificcoding.com/category/politics</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>https://www.magnificcoding.com/category/sports</loc>
+            <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+            </url>
     <url>
         <loc>https://www.magnificcoding.com/category/laravel</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
         <loc>https://www.magnificcoding.com/category/tailwind-css</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
-        <loc>https://www.magnificcoding.com/category/react-js</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://www.magnificcoding.com/article/2023-11-18/jjjjjjj-gggggg-dddddd</loc>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
-        <loc>https://www.magnificcoding.com/category/vue-js</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://www.magnificcoding.com/article/2023-11-21/president-uhuru-kenyatta-to-visit-western-kenya</loc>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
-        <loc>https://www.magnificcoding.com/article/raila-odinga-for-president-in-2022</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://www.magnificcoding.com/article/2023-11-21/president-william-ruto-to-visit-western-kenya</loc>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
-        <loc>https://www.magnificcoding.com/article/president-uhuru-kenyatta-to-visit-western-kenya</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://www.magnificcoding.com/tag/kenya</loc>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
-        <loc>https://www.magnificcoding.com/article/william-ruto-for-president-in-2022</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://www.magnificcoding.com/tag/africa</loc>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
+            </url>
     <url>
-        <loc>https://www.magnificcoding.com/article/eugine-yyyy</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://www.magnificcoding.com/article-author/whitney</loc>
+            <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        </url>
-    <url>
-        <loc>https://www.magnificcoding.com/tag/frontend</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-        </url>
-    <url>
-        <loc>https://www.magnificcoding.com/tag/backend</loc>
-        <lastmod>2023-04-10T22:09:46+00:00</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-        </url>
-    <url>
-        <loc>https://www.magnificcoding.com/article-author/mercy-mulongo</loc>
-        <lastmod>2023-04-10T22:09:47+00:00</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-        </url>
+            </url>
 </urlset>

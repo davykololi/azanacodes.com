@@ -75,4 +75,21 @@ class ArticleFormRequest extends FormRequest
 
         return $customized_messages;
     }
+
+    public function getValidRequest()
+    {
+        return [
+            'author_id' => $this->input('author_id'),
+            'category_id' => $this->input('category'),
+            'slug' => $this->input('slug'),
+            'title' => $this->input('title'),
+            'subtitle' => $this->input('subtitle'),
+            'content' => $this->input('content'),
+            'article_image' => $this->input('article_image'),
+            'meta_keywords' => $this->input('meta_keywords'),
+            'meta_description' => $this->input('meta_description'),
+            'is_published' => $this->input('is_published') ?? false,
+            'published_at' => $this->input('published_at'),
+        ];
+    }
 }

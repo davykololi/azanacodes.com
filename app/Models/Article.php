@@ -28,7 +28,7 @@ class Article extends Model implements Feedable
     use HasFactory, Sluggable, Searchable;
     protected $table = 'articles';
     protected $primaryKey = 'id'; 
-    protected $appends = ['published','reading_time'];
+    protected $appends = ['published','reading_time','created_date'];
     protected $fillable = ['title','image','caption','content','description','keywords','total_views','is_published','published_at','user_id','category_id','slug','published_by'];
     const EXCERPT_LENGTH = 150;
     protected $casts = ['title'=>TimestampsCast::class,'description'=>TimestampsCast::class,'caption'=>TimestampsCast::class,'user_id'=>'int','category_id'=>'int','is_published'=>'boolean','total_views'=>'int','created_at' => 'date', ];
@@ -58,11 +58,11 @@ class Article extends Model implements Feedable
     public function toFeedItem(): FeedItem
     {
         return FeedItem::create()
-            ->id(env('APP_URL').'/article/'.$this->slug)
+            ->id(env('APP_URL').'/article/'.$this->published_at."/".$this->slug)
             ->title($this->title)
             ->summary($this->description)
             ->updated($this->updated_at)
-            ->link(route('article.details',$this->slug))
+            ->link(route('article.details',['published_at'=>$this->published_at,'slug'=>$this->slug]))
             ->authorName($this->user->name);
     }
 
@@ -117,9 +117,9 @@ class Article extends Model implements Feedable
         return $query->with('user','category','tags','comments')->withCount('comments');
     }
 
-    public function path()
+    public function path(): string
     {
-        return route('article.details', $this->slug);
+        return route('article.details',['published_at'=>$this->published_at,'slug'=>$this->slug]);
     }
 
     public function scopePublished($query)

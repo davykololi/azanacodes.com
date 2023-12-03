@@ -76,7 +76,7 @@ class GenerateSitemap extends Command
 
         $articles = Article::published()->get();
         foreach($articles as $article){
-            $articleUrl = "https://www.magnificcoding.com/article/".$article->slug;
+            $articleUrl = "https://www.magnificcoding.com/article/".$article->published_at. "/" .$article->slug;
             $sitemap->add($articleUrl);
         }
 
